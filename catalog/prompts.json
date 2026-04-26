@@ -5,7 +5,7 @@
     "title_zh": "高端产品主视觉",
     "category": "product-photography",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/product-hero.svg",
+    "preview_image": "assets/generated/product-hero.png",
     "prompt": "Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand.",
     "prompt_zh": "为一支哑光白色护肤精华瓶创建高端电商主视觉。产品放在半透明琥珀色亚克力块上，背景为温暖奶油色，使用柔和斜向晨光、细微瓶身水汽和真实玻璃反射，右侧保留足够负空间用于标题文字。标签保持极简，并包含清晰可读文字 'AZHU LABS'。写实棚拍产品摄影，85mm 镜头质感，高端 DTC 品牌风格。",
     "recommended_settings": {
@@ -23,7 +23,7 @@
     "title_zh": "极简 SaaS 发布图",
     "category": "ui-brand",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/minimal-saas-hero.svg",
+    "preview_image": "assets/generated/minimal-saas-hero.png",
     "prompt": "Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.",
     "prompt_zh": "生成一张精致的 SaaS 发布主视觉：在平静的米白背景上展示悬浮的数据分析 dashboard UI。界面使用克制的黑色、鼠尾草绿和珊瑚色点缀。包含真实可读的文字占位：'Revenue'、'Retention'、'Forecast'、'Weekly active users'。UI 需要清晰、可读，有柔和阴影和产品驱动型创业公司审美。不要人物，不要装饰性光球，不要不可读乱码文字。",
     "recommended_settings": {
@@ -41,7 +41,7 @@
     "title_zh": "一致性助手吉祥物",
     "category": "character-design",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/character-mascot.svg",
+    "preview_image": "assets/generated/character-mascot.png",
     "prompt": "Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.",
     "prompt_zh": "为一个开发者工具设计友好的 AI 助手吉祥物。角色是紧凑的几何机器人，拥有圆角方形头部、小天线、温暖屏幕表情和简单模块化四肢。使用干净的类矢量 3D 风格，象牙白主体、深石墨色细节和一个小珊瑚色状态灯。同一张图中展示三个姿势：挥手、指向终端、拿着小清单。所有姿势保持一致的轮廓。",
     "recommended_settings": {
@@ -59,7 +59,7 @@
     "title_zh": "AI 文章编辑头图",
     "category": "editorial",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/editorial-header.svg",
+    "preview_image": "assets/generated/editorial-header.png",
     "prompt": "Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.",
     "prompt_zh": "为一篇题为 'The New Visual Language of AI Products' 的文章创建电影感编辑头图。画面中有安静的工作桌、打印出来的图像 contact sheets、一台打开 prompt editor 的笔记本电脑，以及墙上固定的色彩研究板。情绪：思考感、精确、创造性工程。使用自然窗光、低饱和橄榄色和铁锈色点缀、浅景深、高端科技杂志风格。左上方保留干净空间用于标题排版。",
     "recommended_settings": {
@@ -68,7 +68,7 @@
       "background": "opaque"
     },
     "tags": ["editorial", "blog", "magazine", "technology"],
-    "notes": "Good for blog/social preview assets.",
+    "notes": "Good for blog and social share assets.",
     "notes_zh": "适合博客和社交媒体预览图。"
   },
   {
@@ -77,7 +77,7 @@
     "title_zh": "等距工作流图",
     "category": "diagram",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/isometric-workflow.svg",
+    "preview_image": "assets/generated/isometric-workflow.png",
     "prompt": "Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.",
     "prompt_zh": "生成一张干净的等距图，解释 AI 图像提示词工作流。包含五个清晰标签阶段：'Idea'、'Prompt'、'Generate'、'Evaluate'、'Refine'。使用简单几何工作台，并用细线连接。标签需要清晰可读。风格：现代技术文档、白色背景、深石墨线条、少量珊瑚色和蓝绿色点缀，不要杂乱。",
     "recommended_settings": {
@@ -95,7 +95,7 @@
     "title_zh": "品牌包装系统",
     "category": "brand-design",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/packaging-system.svg",
+    "preview_image": "assets/generated/packaging-system.png",
     "prompt": "Create a brand packaging system mockup for a specialty tea company named 'North Window'. Show three boxes, two cylindrical tins, and a folded paper insert on a neutral stone surface. Use a restrained palette of pine green, cream, charcoal, and copper foil. Typography should be minimal and readable. The layout should feel like a premium design studio case study.",
     "prompt_zh": "为一家名为 'North Window' 的精品茶品牌创建包装系统 mockup。在中性石材表面上展示三个盒子、两个圆柱茶罐和一张折叠纸质说明卡。使用克制的松绿色、奶油色、炭黑和铜箔色。排版需要极简且可读。整体布局应像高端设计工作室案例研究。",
     "recommended_settings": {
@@ -113,7 +113,7 @@
     "title_zh": "湖畔阅读亭概念",
     "category": "architecture",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/architectural-concept.svg",
+    "preview_image": "assets/generated/architectural-concept.png",
     "prompt": "Design a small lakeside reading pavilion at dusk. The pavilion uses warm timber ribs, translucent paper-like panels, and a low stone platform. Show a wide architectural visualization with calm water reflections, soft interior glow, and realistic surrounding reeds. No people. The result should feel buildable, not fantasy architecture.",
     "prompt_zh": "设计一个黄昏时分的湖畔小型阅读亭。亭子使用温暖木质肋骨结构、半透明纸感面板和低矮石台。画面为宽幅建筑可视化，包含平静水面倒影、柔和室内光和真实芦苇环境。不要人物。结果应感觉可建造，而不是幻想建筑。",
     "recommended_settings": {
@@ -131,7 +131,7 @@
     "title_zh": "开发者贴纸套装",
     "category": "illustration",
     "model": "gpt-image-2",
-    "preview_image": "assets/samples/sticker-sheet.svg",
+    "preview_image": "assets/generated/sticker-sheet.png",
     "prompt": "Create a sticker sheet for AI developers. Include 12 separate die-cut stickers on a transparent background: terminal window, prompt cursor, image grid, tiny robot head, coffee cup, checklist, model card, dataset stack, magic wand, browser tab, camera lens, and small badge reading 'ship it'. Use consistent thick outlines, limited colors, and playful but polished vector style.",
     "prompt_zh": "为 AI 开发者创建一张贴纸套装。透明背景上包含 12 个独立模切贴纸：终端窗口、prompt 光标、图片网格、小机器人头、咖啡杯、清单、model card、数据集堆、魔法棒、浏览器标签、相机镜头，以及写有 'ship it' 的小徽章。使用一致的粗描边、有限配色、俏皮但精致的矢量风格。",
     "recommended_settings": {

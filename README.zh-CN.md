@@ -16,13 +16,11 @@
 
 这个仓库会把提示词放进结构化 JSON，并渲染成 gallery，方便搜索、测试和扩展。
 
-## Gallery 预览
+## Gallery
 
-当前 gallery 已经为每条 recipe 配置 preview artwork，让仓库第一眼不是纯文本。
+当前 gallery 已经为每条 recipe 配置实际生成图，让仓库第一眼就能判断 prompt 的视觉效果。
 
-> 这些 preview images 是手工构建的演示素材，不是 GPT Image 2 实际输出。配置 OpenAI API key 后，可以运行生成脚本创建真实输出图。
-
-![Product hero preview](assets/samples/product-hero.svg)
+![Product hero generated output](assets/generated/product-hero.png)
 
 ## 快速浏览
 
@@ -48,16 +46,15 @@
 
 ```bash
 cd examples
-npm install
-OPENAI_API_KEY=... npm run generate -- product-hero
+npm run generate -- product-hero
+npm run generate:all
 ```
 
-示例脚本使用 OpenAI Images API 的 `gpt-image-2`，并把图片写入 `examples/out/`。
+示例脚本会读取 `.env` 中的 Azure/OpenAI-compatible 配置，并把图片写入 `assets/generated/`。
 
 ## Roadmap
 
 - 收录 100 条高质量 prompt recipes。
-- 为每条 prompt 补真实生成图。
 - 增加分类页和搜索。
 - 增加图片编辑 before/after 示例。
 - 增加文字渲染、布局控制、产品保真、角色一致性的测试说明。

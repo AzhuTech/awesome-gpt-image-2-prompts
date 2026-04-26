@@ -17,13 +17,11 @@ Most prompt collections are long README dumps. They are useful for search, but h
 
 This repo keeps prompts in structured JSON and renders a gallery so the collection stays easy to search, test, and extend.
 
-## Gallery Preview
+## Gallery
 
-The current gallery includes preview artwork for each recipe so the repository has a visual first impression before real generated outputs are added.
+The gallery pairs each recipe with a generated output image so the repository is useful at first glance, not just a prompt dump.
 
-> Preview images are hand-built demo assets, not GPT Image 2 outputs. Run the generation script with an OpenAI API key to create real outputs.
-
-![Product hero preview](assets/samples/product-hero.svg)
+![Product hero generated output](assets/generated/product-hero.png)
 
 ## Quick Browse
 
@@ -49,11 +47,11 @@ Open the static demo gallery:
 
 ```bash
 cd examples
-npm install
-OPENAI_API_KEY=... npm run generate -- product-hero
+npm run generate -- product-hero
+npm run generate:all
 ```
 
-The example script uses `gpt-image-2` through the OpenAI Images API and writes generated images to `examples/out/`.
+The example script reads Azure/OpenAI-compatible settings from `.env` and writes generated images to `assets/generated/`.
 
 ## Prompt Card Format
 
@@ -64,7 +62,7 @@ Each prompt entry includes:
 - `title_zh`
 - `category`
 - `model`
-- `preview_image`
+- `preview_image` (generated output path)
 - `prompt`
 - `prompt_zh`
 - `recommended_settings`
@@ -77,7 +75,6 @@ The public catalog contains original GPT Image 2 recipes written for this reposi
 ## Roadmap
 
 - Add 100 curated prompt recipes.
-- Add real generated outputs for every prompt.
 - Add category pages and search.
 - Add before/after image-edit examples.
 - Add prompt evaluation notes for text rendering, layout control, product fidelity, and character consistency.

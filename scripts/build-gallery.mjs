@@ -33,10 +33,10 @@ const categoryButtons = categories.map((category) => `
 const cards = prompts.map((item) => `
   <article class="card" data-category="${escapeHtml(item.category)}">
     <figure>
-      <img src="../${escapeHtml(item.preview_image)}" alt="${escapeHtml(item.title)} preview" loading="lazy">
+      <img src="../${escapeHtml(item.preview_image)}" alt="${escapeHtml(item.title)} generated output" loading="lazy">
       <figcaption>
-        <span data-lang="en">Preview artwork, not a model output yet</span>
-        <span data-lang="zh">预览图，暂非模型实际输出</span>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
       </figcaption>
     </figure>
     <div class="body">

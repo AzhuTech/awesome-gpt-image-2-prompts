@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
-  <title id="title">Product Hero</title>
-  <desc id="desc">Demo preview artwork for the Product Hero GPT Image 2 prompt recipe.</desc>
-  <rect width="960" height="640" fill="#f4dfc2"/>
-  <rect x="84" y="92" width="792" height="456" rx="36" fill="#f4dfc2"/><rect x="168" y="334" width="482" height="92" rx="22" fill="#d89958" opacity=".56"/><rect x="346" y="155" width="156" height="252" rx="34" fill="#fbfbf8" stroke="#14181c" stroke-width="8"/><rect x="382" y="244" width="84" height="84" rx="12" fill="#f7f1e5" stroke="#14181c" stroke-width="5"/><text x="395" y="294" font-size="18" font-weight="800" fill="#14181c">AZHU</text><circle cx="610" cy="194" r="52" fill="#c95f45" opacity=".35"/><path d="M128 146 C282 68 520 64 766 126" stroke="#fff8ec" stroke-width="28" opacity=".65" fill="none"/>
-  <rect x="28" y="28" width="222" height="42" rx="21" fill="#111418" opacity=".9"/>
-  <text x="50" y="56" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" fill="#fbfbf8">preview demo</text>
-</svg>
