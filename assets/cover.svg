@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome GPT Image 2 Prompts</title>
+  <desc id="desc">A gallery-style cover image showing prompt cards and generated image placeholders.</desc>
+  <rect width="1200" height="630" fill="#101418"/>
+  <rect x="44" y="44" width="1112" height="542" rx="28" fill="#f7f1e5"/>
+  <text x="88" y="122" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="800" fill="#101418">Awesome GPT Image 2 Prompts</text>
+  <text x="92" y="166" font-family="Inter, Arial, sans-serif" font-size="24" fill="#46515c">Structured visual recipes and demo scaffolding.</text>
+  <g transform="translate(88 220)">
+    <rect width="300" height="250" rx="18" fill="#fbfbf8" stroke="#101418" stroke-width="3"/>
+    <rect x="20" y="20" width="260" height="126" rx="14" fill="#c95f45"/>
+    <circle cx="88" cy="82" r="32" fill="#f7d9a8"/>
+    <rect x="136" y="54" width="84" height="60" rx="14" fill="#f3f0e8"/>
+    <text x="22" y="184" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#101418">Product hero</text>
+    <text x="22" y="214" font-family="Inter, Arial, sans-serif" font-size="15" fill="#46515c">studio light, clean label, shelf-ready</text>
+  </g>
+  <g transform="translate(450 220)">
+    <rect width="300" height="250" rx="18" fill="#fbfbf8" stroke="#101418" stroke-width="3"/>
+    <rect x="20" y="20" width="260" height="126" rx="14" fill="#3b6f68"/>
+    <path d="M60 116 C72 60 126 46 150 92 C176 42 230 66 242 116 Z" fill="#c7e4d6"/>
+    <text x="22" y="184" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#101418">Character design</text>
+    <text x="22" y="214" font-family="Inter, Arial, sans-serif" font-size="15" fill="#46515c">consistent mascot, reusable silhouette</text>
+  </g>
+  <g transform="translate(812 220)">
+    <rect width="300" height="250" rx="18" fill="#fbfbf8" stroke="#101418" stroke-width="3"/>
+    <rect x="20" y="20" width="260" height="126" rx="14" fill="#232a31"/>
+    <rect x="44" y="48" width="212" height="76" rx="10" fill="#f7f1e5"/>
+    <rect x="64" y="68" width="72" height="12" rx="6" fill="#c95f45"/>
+    <rect x="64" y="92" width="146" height="12" rx="6" fill="#3b6f68"/>
+    <text x="22" y="184" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#101418">UI launch image</text>
+    <text x="22" y="214" font-family="Inter, Arial, sans-serif" font-size="15" fill="#46515c">real text slots, usable composition</text>
+  </g>
+</svg>

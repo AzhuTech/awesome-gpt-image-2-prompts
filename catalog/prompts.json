@@ -1,0 +1,114 @@
+[
+  {
+    "id": "product-hero",
+    "title": "Premium Product Hero",
+    "category": "product-photography",
+    "model": "gpt-image-2",
+    "prompt": "Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["product", "commerce", "studio", "brand"],
+    "notes": "Strong first demo category because product shots are easy to compare and share."
+  },
+  {
+    "id": "minimal-saas-hero",
+    "title": "Minimal SaaS Launch Hero",
+    "category": "ui-brand",
+    "model": "gpt-image-2",
+    "prompt": "Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["saas", "ui", "dashboard", "launch"],
+    "notes": "Tests text rendering and structured UI composition."
+  },
+  {
+    "id": "character-mascot",
+    "title": "Consistent Helper Mascot",
+    "category": "character-design",
+    "model": "gpt-image-2",
+    "prompt": "Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "transparent"
+    },
+    "tags": ["character", "mascot", "consistency", "developer-tools"],
+    "notes": "Designed to test multi-pose character consistency."
+  },
+  {
+    "id": "editorial-header",
+    "title": "Editorial AI Essay Header",
+    "category": "editorial",
+    "model": "gpt-image-2",
+    "prompt": "Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["editorial", "blog", "magazine", "technology"],
+    "notes": "Good for blog/social preview assets."
+  },
+  {
+    "id": "isometric-workflow",
+    "title": "Isometric Workflow Diagram",
+    "category": "diagram",
+    "model": "gpt-image-2",
+    "prompt": "Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["diagram", "workflow", "documentation", "isometric"],
+    "notes": "Tests diagram label rendering and layout control."
+  },
+  {
+    "id": "packaging-system",
+    "title": "Brand Packaging System",
+    "category": "brand-design",
+    "model": "gpt-image-2",
+    "prompt": "Create a brand packaging system mockup for a specialty tea company named 'North Window'. Show three boxes, two cylindrical tins, and a folded paper insert on a neutral stone surface. Use a restrained palette of pine green, cream, charcoal, and copper foil. Typography should be minimal and readable. The layout should feel like a premium design studio case study.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["branding", "packaging", "mockup", "case-study"],
+    "notes": "Useful for brand designers and e-commerce creators."
+  },
+  {
+    "id": "architectural-concept",
+    "title": "Small Pavilion Concept",
+    "category": "architecture",
+    "model": "gpt-image-2",
+    "prompt": "Design a small lakeside reading pavilion at dusk. The pavilion uses warm timber ribs, translucent paper-like panels, and a low stone platform. Show a wide architectural visualization with calm water reflections, soft interior glow, and realistic surrounding reeds. No people. The result should feel buildable, not fantasy architecture.",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["architecture", "visualization", "concept", "dusk"],
+    "notes": "Good for testing realism and material control."
+  },
+  {
+    "id": "sticker-sheet",
+    "title": "Developer Sticker Sheet",
+    "category": "illustration",
+    "model": "gpt-image-2",
+    "prompt": "Create a sticker sheet for AI developers. Include 12 separate die-cut stickers on a transparent background: terminal window, prompt cursor, image grid, tiny robot head, coffee cup, checklist, model card, dataset stack, magic wand, browser tab, camera lens, and small badge reading 'ship it'. Use consistent thick outlines, limited colors, and playful but polished vector style.",
+    "recommended_settings": {
+      "size": "1024x1024",
+      "quality": "high",
+      "background": "transparent"
+    },
+    "tags": ["stickers", "developer", "transparent", "vector"],
+    "notes": "Shareable social asset and merch-friendly category."
+  }
+]
