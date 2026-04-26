@@ -125,8 +125,8 @@ const html = `<!doctype html>
 </html>
 `;
 
-await mkdir("site", { recursive: true });
-await writeFile("site/index.html", html, "utf8");
+await mkdir("docs", { recursive: true });
+await writeFile("docs/index.html", html, "utf8");
 
 function escapeHtml(value) {
   return String(value)
@@ -135,4 +135,3 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
 }
-

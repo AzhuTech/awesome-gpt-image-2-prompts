@@ -35,7 +35,7 @@ Browse the structured catalog:
 
 Open the static demo gallery:
 
-- [site/index.html](site/index.html)
+- [docs/index.html](docs/index.html)
 
 ## Generate A Demo Image
 

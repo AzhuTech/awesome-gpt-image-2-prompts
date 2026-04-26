@@ -64,7 +64,7 @@ Public repository:
 - `catalog/prompts.json`
 - `docs/research.md`
 - `examples/generate.js`
-- `site/index.html`
+- `docs/index.html`
 - `assets/cover.svg`
 
 Future website:

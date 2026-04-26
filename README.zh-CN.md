@@ -34,7 +34,7 @@
 
 本地静态 gallery：
 
-- [site/index.html](site/index.html)
+- [docs/index.html](docs/index.html)
 
 ## 生成演示图
 
