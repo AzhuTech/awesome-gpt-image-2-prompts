@@ -17,6 +17,14 @@ Most prompt collections are long README dumps. They are useful for search, but h
 
 This repo keeps prompts in structured JSON and renders a gallery so the collection stays easy to search, test, and extend.
 
+## Gallery Preview
+
+The current gallery includes preview artwork for each recipe so the repository has a visual first impression before real generated outputs are added.
+
+> Preview images are hand-built demo assets, not GPT Image 2 outputs. Run the generation script with an OpenAI API key to create real outputs.
+
+![Product hero preview](assets/samples/product-hero.svg)
+
 ## Quick Browse
 
 | Category | Use case | Example |
@@ -53,12 +61,17 @@ Each prompt entry includes:
 
 - `id`
 - `title`
+- `title_zh`
 - `category`
 - `model`
+- `preview_image`
 - `prompt`
+- `prompt_zh`
 - `recommended_settings`
 - `tags`
 - `notes`
+- `notes_zh`
+
 The public catalog contains original GPT Image 2 recipes written for this repository. Internal source research is maintained privately so this repo stays focused on AzhuTech's prompt library and demos.
 
 ## Roadmap

@@ -11,79 +11,181 @@
       color: #111418;
       background: #f7f1e5;
     }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       background: #f7f1e5;
     }
+    [data-lang="zh"] {
+      display: none;
+    }
+    body.lang-zh [data-lang="en"] {
+      display: none;
+    }
+    body.lang-zh [data-lang="zh"] {
+      display: inline;
+    }
     header {
-      padding: 56px min(6vw, 72px) 32px;
+      padding: 48px min(6vw, 72px) 30px;
       background: #111418;
       color: #fbfbf8;
     }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 42px;
+    }
+    .brand {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      color: #d8d0c1;
+    }
+    .language {
+      display: inline-flex;
+      border: 1px solid #3b454d;
+      border-radius: 999px;
+      padding: 4px;
+      background: #1b2228;
+    }
+    .language button {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: #d8d0c1;
+      background: transparent;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    body.lang-en .language [data-set-lang="en"],
+    body.lang-zh .language [data-set-lang="zh"] {
+      color: #111418;
+      background: #f7f1e5;
+    }
     h1 {
       margin: 0;
-      font-size: clamp(40px, 7vw, 84px);
-      line-height: 0.95;
+      font-size: clamp(38px, 7vw, 86px);
+      line-height: 0.96;
       letter-spacing: 0;
-      max-width: 980px;
+      max-width: 1040px;
     }
     header p {
-      max-width: 720px;
+      max-width: 780px;
       font-size: 20px;
-      line-height: 1.5;
+      line-height: 1.55;
       color: #d7d0c3;
+    }
+    .controls {
+      padding: 24px min(6vw, 72px) 0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .chip {
+      border: 1px solid #d1c8b7;
+      background: #fbfbf8;
+      color: #111418;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .chip.active {
+      background: #111418;
+      color: #fbfbf8;
+      border-color: #111418;
     }
     main {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 22px;
-      padding: 32px min(6vw, 72px) 72px;
+      padding: 24px min(6vw, 72px) 72px;
     }
     .card {
       background: #fbfbf8;
       border: 1px solid #d8d0c1;
       border-radius: 8px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
     }
-    .visual {
-      min-height: 190px;
-      display: grid;
-      place-items: center;
+    .card[hidden] {
+      display: none;
+    }
+    figure {
+      margin: 0;
+      position: relative;
+      background: #e6ddce;
+      aspect-ratio: 3 / 2;
+      overflow: hidden;
+    }
+    figure img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    figcaption {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      border-radius: 999px;
+      background: rgba(17, 20, 24, .88);
       color: #fbfbf8;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-    }
-    .product-photography { background: linear-gradient(135deg, #c95f45, #f0c98d); }
-    .ui-brand { background: linear-gradient(135deg, #232a31, #3b6f68); }
-    .character-design { background: linear-gradient(135deg, #3b6f68, #c7e4d6); color: #111418; }
-    .editorial { background: linear-gradient(135deg, #624834, #b66d52); }
-    .diagram { background: linear-gradient(135deg, #1f2933, #7f9183); }
-    .brand-design { background: linear-gradient(135deg, #1f3f36, #c7a45d); }
-    .architecture { background: linear-gradient(135deg, #3a4650, #d8b989); }
-    .illustration { background: linear-gradient(135deg, #1d1d1b, #df775d); }
-    .body {
-      padding: 22px;
-    }
-    .eyebrow {
-      margin: 0 0 8px;
-      text-transform: uppercase;
+      padding: 8px 12px;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 0.08em;
+    }
+    .body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .eyebrow {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .08em;
       color: #65717b;
     }
     h2 {
-      margin: 0 0 10px;
+      margin: 0;
       font-size: 24px;
+      line-height: 1.15;
       letter-spacing: 0;
     }
-    .body p {
+    .notes {
+      margin: 0;
       color: #46515c;
       line-height: 1.5;
     }
+    .tags {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+    .tags span {
+      background: #efe7d9;
+      border-radius: 999px;
+      padding: 5px 8px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #46515c;
+    }
     pre {
+      margin: 0;
       white-space: pre-wrap;
       overflow-wrap: anywhere;
       background: #111418;
@@ -92,119 +194,388 @@
       border-radius: 8px;
       font-size: 13px;
       line-height: 1.55;
+      max-height: 310px;
+      overflow: auto;
+    }
+    .copy {
+      align-self: flex-start;
+      border: 0;
+      border-radius: 999px;
+      background: #c95f45;
+      color: #fffaf0;
+      padding: 10px 14px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    @media (max-width: 720px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      main {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
-<body>
+<body class="lang-en">
   <header>
-    <h1>Awesome GPT Image 2 Prompts</h1>
-    <p>Structured visual recipes for product shots, UI launch assets, characters, diagrams, editorial images, and brand systems.</p>
+    <div class="topbar">
+      <div class="brand">AzhuTech / prompt gallery</div>
+      <div class="language" aria-label="Language">
+        <button type="button" data-set-lang="en">English</button>
+        <button type="button" data-set-lang="zh">中文</button>
+      </div>
+    </div>
+    <h1>
+      <span data-lang="en">Awesome GPT Image 2 Prompts</span>
+      <span data-lang="zh">Awesome GPT Image 2 Prompts</span>
+    </h1>
+    <p>
+      <span data-lang="en">Structured visual recipes for product shots, UI launch assets, characters, diagrams, editorial images, and brand systems.</span>
+      <span data-lang="zh">面向产品图、UI 发布图、角色、图示、编辑头图和品牌系统的结构化视觉提示词。</span>
+    </p>
   </header>
+  <section class="controls" aria-label="Category filters">
+    <button class="chip active" data-filter="all">
+      <span data-lang="en">All</span>
+      <span data-lang="zh">全部</span>
+    </button>
+    
+  <button class="chip" data-filter="product-photography">
+    <span data-lang="en">Product</span>
+    <span data-lang="zh">产品</span>
+  </button>
+
+
+  <button class="chip" data-filter="ui-brand">
+    <span data-lang="en">UI / Brand</span>
+    <span data-lang="zh">UI / 品牌</span>
+  </button>
+
+
+  <button class="chip" data-filter="character-design">
+    <span data-lang="en">Character</span>
+    <span data-lang="zh">角色</span>
+  </button>
+
+
+  <button class="chip" data-filter="editorial">
+    <span data-lang="en">Editorial</span>
+    <span data-lang="zh">编辑头图</span>
+  </button>
+
+
+  <button class="chip" data-filter="diagram">
+    <span data-lang="en">Diagram</span>
+    <span data-lang="zh">图示</span>
+  </button>
+
+
+  <button class="chip" data-filter="brand-design">
+    <span data-lang="en">Brand</span>
+    <span data-lang="zh">品牌</span>
+  </button>
+
+
+  <button class="chip" data-filter="architecture">
+    <span data-lang="en">Architecture</span>
+    <span data-lang="zh">建筑</span>
+  </button>
+
+
+  <button class="chip" data-filter="illustration">
+    <span data-lang="en">Illustration</span>
+    <span data-lang="zh">插画</span>
+  </button>
+
+  </section>
   <main>
     
-  <article class="card">
-    <div class="visual product-photography">
-      <span>product photography</span>
-    </div>
+  <article class="card" data-category="product-photography">
+    <figure>
+      <img src="../assets/samples/product-hero.svg" alt="Premium Product Hero preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Premium Product Hero</h2>
-      <p>Strong first demo category because product shots are easy to compare and share.</p>
-      <pre>Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Premium Product Hero</span>
+        <span data-lang="zh">高端产品主视觉</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Strong first demo category because product shots are easy to compare and share.</span>
+        <span data-lang="zh">适合作为首个演示类别，产品图容易对比，也方便传播。</span>
+      </p>
+      <div class="tags"><span>product</span><span>commerce</span><span>studio</span><span>brand</span></div>
+      <pre data-prompt-en="Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand." data-prompt-zh="为一支哑光白色护肤精华瓶创建高端电商主视觉。产品放在半透明琥珀色亚克力块上，背景为温暖奶油色，使用柔和斜向晨光、细微瓶身水汽和真实玻璃反射，右侧保留足够负空间用于标题文字。标签保持极简，并包含清晰可读文字 'AZHU LABS'。写实棚拍产品摄影，85mm 镜头质感，高端 DTC 品牌风格。">Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual ui-brand">
-      <span>ui brand</span>
-    </div>
+  <article class="card" data-category="ui-brand">
+    <figure>
+      <img src="../assets/samples/minimal-saas-hero.svg" alt="Minimal SaaS Launch Hero preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Minimal SaaS Launch Hero</h2>
-      <p>Tests text rendering and structured UI composition.</p>
-      <pre>Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Minimal SaaS Launch Hero</span>
+        <span data-lang="zh">极简 SaaS 发布图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Tests text rendering and structured UI composition.</span>
+        <span data-lang="zh">用于测试文字渲染和结构化 UI 构图。</span>
+      </p>
+      <div class="tags"><span>saas</span><span>ui</span><span>dashboard</span><span>launch</span></div>
+      <pre data-prompt-en="Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text." data-prompt-zh="生成一张精致的 SaaS 发布主视觉：在平静的米白背景上展示悬浮的数据分析 dashboard UI。界面使用克制的黑色、鼠尾草绿和珊瑚色点缀。包含真实可读的文字占位：'Revenue'、'Retention'、'Forecast'、'Weekly active users'。UI 需要清晰、可读，有柔和阴影和产品驱动型创业公司审美。不要人物，不要装饰性光球，不要不可读乱码文字。">Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual character-design">
-      <span>character design</span>
-    </div>
+  <article class="card" data-category="character-design">
+    <figure>
+      <img src="../assets/samples/character-mascot.svg" alt="Consistent Helper Mascot preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Consistent Helper Mascot</h2>
-      <p>Designed to test multi-pose character consistency.</p>
-      <pre>Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Consistent Helper Mascot</span>
+        <span data-lang="zh">一致性助手吉祥物</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Designed to test multi-pose character consistency.</span>
+        <span data-lang="zh">用于测试同一角色在多姿势下的一致性。</span>
+      </p>
+      <div class="tags"><span>character</span><span>mascot</span><span>consistency</span><span>developer-tools</span></div>
+      <pre data-prompt-en="Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses." data-prompt-zh="为一个开发者工具设计友好的 AI 助手吉祥物。角色是紧凑的几何机器人，拥有圆角方形头部、小天线、温暖屏幕表情和简单模块化四肢。使用干净的类矢量 3D 风格，象牙白主体、深石墨色细节和一个小珊瑚色状态灯。同一张图中展示三个姿势：挥手、指向终端、拿着小清单。所有姿势保持一致的轮廓。">Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual editorial">
-      <span>editorial</span>
-    </div>
+  <article class="card" data-category="editorial">
+    <figure>
+      <img src="../assets/samples/editorial-header.svg" alt="Editorial AI Essay Header preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Editorial AI Essay Header</h2>
-      <p>Good for blog/social preview assets.</p>
-      <pre>Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Editorial AI Essay Header</span>
+        <span data-lang="zh">AI 文章编辑头图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Good for blog/social preview assets.</span>
+        <span data-lang="zh">适合博客和社交媒体预览图。</span>
+      </p>
+      <div class="tags"><span>editorial</span><span>blog</span><span>magazine</span><span>technology</span></div>
+      <pre data-prompt-en="Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography." data-prompt-zh="为一篇题为 'The New Visual Language of AI Products' 的文章创建电影感编辑头图。画面中有安静的工作桌、打印出来的图像 contact sheets、一台打开 prompt editor 的笔记本电脑，以及墙上固定的色彩研究板。情绪：思考感、精确、创造性工程。使用自然窗光、低饱和橄榄色和铁锈色点缀、浅景深、高端科技杂志风格。左上方保留干净空间用于标题排版。">Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual diagram">
-      <span>diagram</span>
-    </div>
+  <article class="card" data-category="diagram">
+    <figure>
+      <img src="../assets/samples/isometric-workflow.svg" alt="Isometric Workflow Diagram preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Isometric Workflow Diagram</h2>
-      <p>Tests diagram label rendering and layout control.</p>
-      <pre>Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Isometric Workflow Diagram</span>
+        <span data-lang="zh">等距工作流图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Tests diagram label rendering and layout control.</span>
+        <span data-lang="zh">用于测试图示标签渲染和布局控制。</span>
+      </p>
+      <div class="tags"><span>diagram</span><span>workflow</span><span>documentation</span><span>isometric</span></div>
+      <pre data-prompt-en="Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter." data-prompt-zh="生成一张干净的等距图，解释 AI 图像提示词工作流。包含五个清晰标签阶段：'Idea'、'Prompt'、'Generate'、'Evaluate'、'Refine'。使用简单几何工作台，并用细线连接。标签需要清晰可读。风格：现代技术文档、白色背景、深石墨线条、少量珊瑚色和蓝绿色点缀，不要杂乱。">Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual brand-design">
-      <span>brand design</span>
-    </div>
+  <article class="card" data-category="brand-design">
+    <figure>
+      <img src="../assets/samples/packaging-system.svg" alt="Brand Packaging System preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Brand Packaging System</h2>
-      <p>Useful for brand designers and e-commerce creators.</p>
-      <pre>Create a brand packaging system mockup for a specialty tea company named 'North Window'. Show three boxes, two cylindrical tins, and a folded paper insert on a neutral stone surface. Use a restrained palette of pine green, cream, charcoal, and copper foil. Typography should be minimal and readable. The layout should feel like a premium design studio case study.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Brand Packaging System</span>
+        <span data-lang="zh">品牌包装系统</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Useful for brand designers and e-commerce creators.</span>
+        <span data-lang="zh">适合品牌设计师和电商创作者。</span>
+      </p>
+      <div class="tags"><span>branding</span><span>packaging</span><span>mockup</span><span>case-study</span></div>
+      <pre data-prompt-en="Create a brand packaging system mockup for a specialty tea company named 'North Window'. Show three boxes, two cylindrical tins, and a folded paper insert on a neutral stone surface. Use a restrained palette of pine green, cream, charcoal, and copper foil. Typography should be minimal and readable. The layout should feel like a premium design studio case study." data-prompt-zh="为一家名为 'North Window' 的精品茶品牌创建包装系统 mockup。在中性石材表面上展示三个盒子、两个圆柱茶罐和一张折叠纸质说明卡。使用克制的松绿色、奶油色、炭黑和铜箔色。排版需要极简且可读。整体布局应像高端设计工作室案例研究。">Create a brand packaging system mockup for a specialty tea company named 'North Window'. Show three boxes, two cylindrical tins, and a folded paper insert on a neutral stone surface. Use a restrained palette of pine green, cream, charcoal, and copper foil. Typography should be minimal and readable. The layout should feel like a premium design studio case study.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual architecture">
-      <span>architecture</span>
-    </div>
+  <article class="card" data-category="architecture">
+    <figure>
+      <img src="../assets/samples/architectural-concept.svg" alt="Small Pavilion Concept preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1536x1024</p>
-      <h2>Small Pavilion Concept</h2>
-      <p>Good for testing realism and material control.</p>
-      <pre>Design a small lakeside reading pavilion at dusk. The pavilion uses warm timber ribs, translucent paper-like panels, and a low stone platform. Show a wide architectural visualization with calm water reflections, soft interior glow, and realistic surrounding reeds. No people. The result should feel buildable, not fantasy architecture.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Small Pavilion Concept</span>
+        <span data-lang="zh">湖畔阅读亭概念</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Good for testing realism and material control.</span>
+        <span data-lang="zh">适合测试真实感和材质控制。</span>
+      </p>
+      <div class="tags"><span>architecture</span><span>visualization</span><span>concept</span><span>dusk</span></div>
+      <pre data-prompt-en="Design a small lakeside reading pavilion at dusk. The pavilion uses warm timber ribs, translucent paper-like panels, and a low stone platform. Show a wide architectural visualization with calm water reflections, soft interior glow, and realistic surrounding reeds. No people. The result should feel buildable, not fantasy architecture." data-prompt-zh="设计一个黄昏时分的湖畔小型阅读亭。亭子使用温暖木质肋骨结构、半透明纸感面板和低矮石台。画面为宽幅建筑可视化，包含平静水面倒影、柔和室内光和真实芦苇环境。不要人物。结果应感觉可建造，而不是幻想建筑。">Design a small lakeside reading pavilion at dusk. The pavilion uses warm timber ribs, translucent paper-like panels, and a low stone platform. Show a wide architectural visualization with calm water reflections, soft interior glow, and realistic surrounding reeds. No people. The result should feel buildable, not fantasy architecture.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
 
-  <article class="card">
-    <div class="visual illustration">
-      <span>illustration</span>
-    </div>
+  <article class="card" data-category="illustration">
+    <figure>
+      <img src="../assets/samples/sticker-sheet.svg" alt="Developer Sticker Sheet preview" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Preview artwork, not a model output yet</span>
+        <span data-lang="zh">预览图，暂非模型实际输出</span>
+      </figcaption>
+    </figure>
     <div class="body">
-      <p class="eyebrow">gpt-image-2 / 1024x1024</p>
-      <h2>Developer Sticker Sheet</h2>
-      <p>Shareable social asset and merch-friendly category.</p>
-      <pre>Create a sticker sheet for AI developers. Include 12 separate die-cut stickers on a transparent background: terminal window, prompt cursor, image grid, tiny robot head, coffee cup, checklist, model card, dataset stack, magic wand, browser tab, camera lens, and small badge reading 'ship it'. Use consistent thick outlines, limited colors, and playful but polished vector style.</pre>
+      <p class="eyebrow">
+        <span>gpt-image-2</span>
+        <span>1024x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Developer Sticker Sheet</span>
+        <span data-lang="zh">开发者贴纸套装</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Shareable social asset and merch-friendly category.</span>
+        <span data-lang="zh">适合作为社交传播素材，也适合周边贴纸方向。</span>
+      </p>
+      <div class="tags"><span>stickers</span><span>developer</span><span>transparent</span><span>vector</span></div>
+      <pre data-prompt-en="Create a sticker sheet for AI developers. Include 12 separate die-cut stickers on a transparent background: terminal window, prompt cursor, image grid, tiny robot head, coffee cup, checklist, model card, dataset stack, magic wand, browser tab, camera lens, and small badge reading 'ship it'. Use consistent thick outlines, limited colors, and playful but polished vector style." data-prompt-zh="为 AI 开发者创建一张贴纸套装。透明背景上包含 12 个独立模切贴纸：终端窗口、prompt 光标、图片网格、小机器人头、咖啡杯、清单、model card、数据集堆、魔法棒、浏览器标签、相机镜头，以及写有 'ship it' 的小徽章。使用一致的粗描边、有限配色、俏皮但精致的矢量风格。">Create a sticker sheet for AI developers. Include 12 separate die-cut stickers on a transparent background: terminal window, prompt cursor, image grid, tiny robot head, coffee cup, checklist, model card, dataset stack, magic wand, browser tab, camera lens, and small badge reading 'ship it'. Use consistent thick outlines, limited colors, and playful but polished vector style.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
     </div>
   </article>
 
   </main>
+  <script>
+    const body = document.body;
+    const promptBlocks = Array.from(document.querySelectorAll("pre[data-prompt-en]"));
+
+    function setLanguage(lang) {
+      body.classList.toggle("lang-en", lang === "en");
+      body.classList.toggle("lang-zh", lang === "zh");
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      promptBlocks.forEach((block) => {
+        block.textContent = block.dataset[lang === "zh" ? "promptZh" : "promptEn"];
+      });
+    }
+
+    document.querySelectorAll("[data-set-lang]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.setLang));
+    });
+
+    document.querySelectorAll("[data-filter]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("active", item === button));
+        document.querySelectorAll(".card").forEach((card) => {
+          card.hidden = filter !== "all" && card.dataset.category !== filter;
+        });
+      });
+    });
+
+    document.querySelectorAll(".copy").forEach((button) => {
+      button.addEventListener("click", async () => {
+        const prompt = button.closest(".card").querySelector("pre").textContent;
+        await navigator.clipboard.writeText(prompt);
+        const previous = button.textContent;
+        button.textContent = body.classList.contains("lang-zh") ? "已复制" : "Copied";
+        setTimeout(() => { button.textContent = previous; }, 1200);
+      });
+    });
+  </script>
 </body>
 </html>

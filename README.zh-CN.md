@@ -16,6 +16,14 @@
 
 这个仓库会把提示词放进结构化 JSON，并渲染成 gallery，方便搜索、测试和扩展。
 
+## Gallery 预览
+
+当前 gallery 已经为每条 recipe 配置 preview artwork，让仓库第一眼不是纯文本。
+
+> 这些 preview images 是手工构建的演示素材，不是 GPT Image 2 实际输出。配置 OpenAI API key 后，可以运行生成脚本创建真实输出图。
+
+![Product hero preview](assets/samples/product-hero.svg)
+
 ## 快速浏览
 
 | 分类 | 场景 | 示例 |
