@@ -1,6 +1,8 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
+import path from "node:path";
 
 const prompts = JSON.parse(await readFile("catalog/prompts.json", "utf8"));
+const docsDir = "docs";
 const categories = Array.from(new Set(prompts.map((item) => item.category)));
 const categoryLabels = {
   "product-photography": "Product",
@@ -33,7 +35,7 @@ const categoryButtons = categories.map((category) => `
 const cards = prompts.map((item) => `
   <article class="card" data-category="${escapeHtml(item.category)}">
     <figure>
-      <img src="../${escapeHtml(item.preview_image)}" alt="${escapeHtml(item.title)} generated output" loading="lazy">
+      <img src="${escapeHtml(item.preview_image)}" alt="${escapeHtml(item.title)} generated output" loading="lazy">
       <figcaption>
         <span data-lang="en">Generated output</span>
         <span data-lang="zh">实际生成图</span>
@@ -351,8 +353,20 @@ const html = `<!doctype html>
 </html>
 `;
 
-await mkdir("docs", { recursive: true });
-await writeFile("docs/index.html", html, "utf8");
+await syncDocsAssets(prompts);
+await mkdir(docsDir, { recursive: true });
+await writeFile(path.join(docsDir, "index.html"), html, "utf8");
+
+async function syncDocsAssets(items) {
+  for (const item of items) {
+    if (!item.preview_image?.startsWith("assets/")) {
+      continue;
+    }
+    const targetPath = path.join(docsDir, item.preview_image);
+    await mkdir(path.dirname(targetPath), { recursive: true });
+    await copyFile(item.preview_image, targetPath);
+  }
+}
 
 function escapeHtml(value) {
   return String(value)
