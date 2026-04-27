@@ -51,7 +51,7 @@ const heroTiles = featured.map((item, index) => `
 const cards = prompts.map((item) => `
   <article class="card" data-category="${escapeHtml(item.category)}">
     <figure>
-      <img src="${escapeHtml(item.preview_image)}" alt="${escapeHtml(item.title)} generated output" loading="lazy">
+      <img src="${escapeHtml(item.preview_image)}" alt="${escapeHtml(item.title)} generated output">
       <figcaption>
         <span data-lang="en">Generated output</span>
         <span data-lang="zh">实际生成图</span>
