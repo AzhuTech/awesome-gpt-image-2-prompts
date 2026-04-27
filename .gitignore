@@ -4,3 +4,4 @@ examples/out
 .env.*
 !.env.example
 .DS_Store
+.artifacts/
