@@ -6,17 +6,17 @@
   <title>Awesome GPT Image 2 Prompts</title>
   <style>
     :root {
-      color-scheme: light;
+      color-scheme: dark;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111418;
-      background: #f7f1e5;
+      color: #f8fafc;
+      background: #090a0f;
     }
     * {
       box-sizing: border-box;
     }
     body {
       margin: 0;
-      background: #f7f1e5;
+      background: #090a0f;
     }
     [data-lang="zh"] {
       display: none;
@@ -28,9 +28,13 @@
       display: inline;
     }
     header {
-      padding: 48px min(6vw, 72px) 30px;
-      background: #111418;
+      min-height: 92vh;
+      padding: 48px min(6vw, 72px) 34px;
       color: #fbfbf8;
+      background:
+        linear-gradient(90deg, rgba(9, 10, 15, .98), rgba(9, 10, 15, .72) 46%, rgba(9, 10, 15, .25)),
+        linear-gradient(0deg, #090a0f, rgba(9, 10, 15, .08) 40%),
+        url("assets/generated/boss-arena-key-art.png") center / cover;
     }
     .topbar {
       display: flex;
@@ -44,20 +48,21 @@
       font-size: 13px;
       font-weight: 900;
       letter-spacing: .12em;
-      color: #d8d0c1;
+      color: #dbe4ef;
     }
     .language {
       display: inline-flex;
-      border: 1px solid #3b454d;
+      border: 1px solid rgba(248, 250, 252, .28);
       border-radius: 999px;
       padding: 4px;
-      background: #1b2228;
+      background: rgba(12, 16, 26, .78);
+      backdrop-filter: blur(14px);
     }
     .language button {
       border: 0;
       border-radius: 999px;
       padding: 8px 14px;
-      color: #d8d0c1;
+      color: #dbe4ef;
       background: transparent;
       font-weight: 800;
       cursor: pointer;
@@ -65,56 +70,119 @@
     body.lang-en .language [data-set-lang="en"],
     body.lang-zh .language [data-set-lang="zh"] {
       color: #111418;
-      background: #f7f1e5;
+      background: #f8fafc;
     }
     h1 {
       margin: 0;
-      font-size: clamp(38px, 7vw, 86px);
+      font-size: clamp(38px, 7vw, 88px);
       line-height: 0.96;
       letter-spacing: 0;
       max-width: 1040px;
+      text-shadow: 0 3px 40px rgba(0, 0, 0, .45);
     }
-    header p {
-      max-width: 780px;
+    header > p {
+      max-width: 820px;
       font-size: 20px;
       line-height: 1.55;
-      color: #d7d0c3;
+      color: #dbe4ef;
+    }
+    .hero-gallery {
+      margin-top: 38px;
+      display: grid;
+      grid-template-columns: minmax(280px, 1.35fr) repeat(3, minmax(160px, .75fr));
+      gap: 14px;
+      max-width: 1180px;
+    }
+    .hero-tile {
+      position: relative;
+      min-height: 220px;
+      overflow: hidden;
+      border: 1px solid rgba(248, 250, 252, .2);
+      border-radius: 8px;
+      background: #151924;
+    }
+    .hero-tile-large {
+      min-height: 340px;
+    }
+    .hero-tile img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .hero-tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(5, 7, 12, .92));
+    }
+    .hero-tile div {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1;
+    }
+    .hero-tile p {
+      margin: 0 0 8px;
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .hero-tile h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1.12;
+      letter-spacing: 0;
+      text-shadow: 0 1px 20px rgba(0, 0, 0, .5);
     }
     .controls {
-      padding: 24px min(6vw, 72px) 0;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      padding: 16px min(6vw, 72px);
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       align-items: center;
+      background: rgba(9, 10, 15, .9);
+      border-top: 1px solid rgba(248, 250, 252, .12);
+      border-bottom: 1px solid rgba(248, 250, 252, .1);
+      backdrop-filter: blur(18px);
     }
     .chip {
-      border: 1px solid #d1c8b7;
-      background: #fbfbf8;
-      color: #111418;
+      border: 1px solid rgba(248, 250, 252, .18);
+      background: rgba(248, 250, 252, .08);
+      color: #f8fafc;
       border-radius: 999px;
       padding: 10px 14px;
       font-weight: 800;
       cursor: pointer;
     }
     .chip.active {
-      background: #111418;
-      color: #fbfbf8;
-      border-color: #111418;
+      background: #fbbf24;
+      color: #111418;
+      border-color: #fbbf24;
     }
     main {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 22px;
-      padding: 24px min(6vw, 72px) 72px;
+      padding: 30px min(6vw, 72px) 72px;
+      background: #090a0f;
     }
     .card {
-      background: #fbfbf8;
-      border: 1px solid #d8d0c1;
+      background: #111827;
+      border: 1px solid rgba(248, 250, 252, .12);
       border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       min-width: 0;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .22);
     }
     .card[hidden] {
       display: none;
@@ -122,7 +190,7 @@
     figure {
       margin: 0;
       position: relative;
-      background: #e6ddce;
+      background: #1f2937;
       aspect-ratio: 3 / 2;
       overflow: hidden;
     }
@@ -137,7 +205,7 @@
       left: 14px;
       bottom: 14px;
       border-radius: 999px;
-      background: rgba(17, 20, 24, .88);
+      background: rgba(5, 7, 12, .86);
       color: #fbfbf8;
       padding: 8px 12px;
       font-size: 12px;
@@ -158,17 +226,18 @@
       font-size: 12px;
       font-weight: 900;
       letter-spacing: .08em;
-      color: #65717b;
+      color: #94a3b8;
     }
     h2 {
       margin: 0;
       font-size: 24px;
       line-height: 1.15;
       letter-spacing: 0;
+      color: #f8fafc;
     }
     .notes {
       margin: 0;
-      color: #46515c;
+      color: #aab6c7;
       line-height: 1.5;
     }
     .tags {
@@ -177,18 +246,18 @@
       flex-wrap: wrap;
     }
     .tags span {
-      background: #efe7d9;
+      background: rgba(248, 250, 252, .1);
       border-radius: 999px;
       padding: 5px 8px;
       font-size: 12px;
       font-weight: 800;
-      color: #46515c;
+      color: #dbe4ef;
     }
     pre {
       margin: 0;
       white-space: pre-wrap;
       overflow-wrap: anywhere;
-      background: #111418;
+      background: #05070c;
       color: #f7f1e5;
       padding: 16px;
       border-radius: 8px;
@@ -201,16 +270,22 @@
       align-self: flex-start;
       border: 0;
       border-radius: 999px;
-      background: #c95f45;
-      color: #fffaf0;
+      background: #e11d48;
+      color: #fff;
       padding: 10px 14px;
       font-weight: 900;
       cursor: pointer;
     }
     @media (max-width: 720px) {
+      header {
+        min-height: auto;
+      }
       .topbar {
         align-items: flex-start;
         flex-direction: column;
+      }
+      .hero-gallery {
+        grid-template-columns: 1fr;
       }
       main {
         grid-template-columns: 1fr;
@@ -228,13 +303,79 @@
       </div>
     </div>
     <h1>
-      <span data-lang="en">Awesome GPT Image 2 Prompts</span>
-      <span data-lang="zh">Awesome GPT Image 2 Prompts</span>
+      <span data-lang="en">Viral GPT Image 2 Prompts</span>
+      <span data-lang="zh">高传播 GPT Image 2 提示词</span>
     </h1>
     <p>
-      <span data-lang="en">Structured visual recipes for product shots, UI launch assets, characters, diagrams, editorial images, and brand systems.</span>
-      <span data-lang="zh">面向产品图、UI 发布图、角色、图示、编辑头图和品牌系统的结构化视觉提示词。</span>
+      <span data-lang="en">Copy-ready recipes for game art, cinematic film frames, anime character cards, beauty editorials, and commercial visuals.</span>
+      <span data-lang="zh">面向游戏艺术、影视剧照、二次元角色、美女摄影和商业视觉的可复制提示词与真实生成图。</span>
     </p>
+    <div class="hero-gallery">
+
+  <article class="hero-tile hero-tile-large">
+    <img src="assets/generated/boss-arena-key-art.png" alt="Boss Arena Key Art generated output">
+    <div>
+      <p>
+        <span data-lang="en">Game Art</span>
+        <span data-lang="zh">游戏艺术</span>
+        / gpt-image-2
+      </p>
+      <h2>
+        <span data-lang="en">Boss Arena Key Art</span>
+        <span data-lang="zh">Boss 战场景关键图</span>
+      </h2>
+    </div>
+  </article>
+
+
+  <article class="hero-tile ">
+    <img src="assets/generated/cyberpunk-samurai-cover.png" alt="Cyberpunk Samurai Cover generated output">
+    <div>
+      <p>
+        <span data-lang="en">Game Art</span>
+        <span data-lang="zh">游戏艺术</span>
+        / gpt-image-2
+      </p>
+      <h2>
+        <span data-lang="en">Cyberpunk Samurai Cover</span>
+        <span data-lang="zh">赛博武士封面</span>
+      </h2>
+    </div>
+  </article>
+
+
+  <article class="hero-tile ">
+    <img src="assets/generated/cozy-rpg-village.png" alt="Cozy RPG Village generated output">
+    <div>
+      <p>
+        <span data-lang="en">Game Art</span>
+        <span data-lang="zh">游戏艺术</span>
+        / gpt-image-2
+      </p>
+      <h2>
+        <span data-lang="en">Cozy RPG Village</span>
+        <span data-lang="zh">治愈系 RPG 村庄</span>
+      </h2>
+    </div>
+  </article>
+
+
+  <article class="hero-tile ">
+    <img src="assets/generated/rpg-ability-icons.png" alt="RPG Ability Icon Sheet generated output">
+    <div>
+      <p>
+        <span data-lang="en">Game Art</span>
+        <span data-lang="zh">游戏艺术</span>
+        / gpt-image-2
+      </p>
+      <h2>
+        <span data-lang="en">RPG Ability Icon Sheet</span>
+        <span data-lang="zh">RPG 技能图标套装</span>
+      </h2>
+    </div>
+  </article>
+
+    </div>
   </header>
   <section class="controls" aria-label="Category filters">
     <button class="chip active" data-filter="all">
@@ -242,57 +383,589 @@
       <span data-lang="zh">全部</span>
     </button>
     
-  <button class="chip" data-filter="product-photography">
-    <span data-lang="en">Product</span>
-    <span data-lang="zh">产品</span>
+  <button class="chip" data-filter="game-art">
+    <span data-lang="en">Game Art</span>
+    <span data-lang="zh">游戏艺术</span>
   </button>
 
 
-  <button class="chip" data-filter="ui-brand">
-    <span data-lang="en">UI / Brand</span>
-    <span data-lang="zh">UI / 品牌</span>
+  <button class="chip" data-filter="anime-character">
+    <span data-lang="en">Anime Character</span>
+    <span data-lang="zh">二次元角色</span>
   </button>
 
 
-  <button class="chip" data-filter="character-design">
-    <span data-lang="en">Character</span>
-    <span data-lang="zh">角色</span>
+  <button class="chip" data-filter="cinematic-film">
+    <span data-lang="en">Cinematic Film</span>
+    <span data-lang="zh">影视电影感</span>
   </button>
 
 
-  <button class="chip" data-filter="editorial">
-    <span data-lang="en">Editorial</span>
-    <span data-lang="zh">编辑头图</span>
+  <button class="chip" data-filter="beauty-photography">
+    <span data-lang="en">Beauty Photo</span>
+    <span data-lang="zh">美女摄影</span>
   </button>
 
 
-  <button class="chip" data-filter="diagram">
-    <span data-lang="en">Diagram</span>
-    <span data-lang="zh">图示</span>
+  <button class="chip" data-filter="brand-commercial">
+    <span data-lang="en">Commercial</span>
+    <span data-lang="zh">商业品牌</span>
   </button>
 
 
-  <button class="chip" data-filter="brand-design">
-    <span data-lang="en">Brand</span>
-    <span data-lang="zh">品牌</span>
-  </button>
-
-
-  <button class="chip" data-filter="architecture">
-    <span data-lang="en">Architecture</span>
-    <span data-lang="zh">建筑</span>
-  </button>
-
-
-  <button class="chip" data-filter="illustration">
-    <span data-lang="en">Illustration</span>
-    <span data-lang="zh">插画</span>
+  <button class="chip" data-filter="utility-design">
+    <span data-lang="en">Utility Design</span>
+    <span data-lang="zh">实用设计</span>
   </button>
 
   </section>
-  <main>
-    
-  <article class="card" data-category="product-photography">
+  <main id="gallery">
+
+  <article class="card" data-category="game-art">
+    <figure>
+      <img src="assets/generated/boss-arena-key-art.png" alt="Boss Arena Key Art generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Game Art</span>
+          <span data-lang="zh">游戏艺术</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Boss Arena Key Art</span>
+        <span data-lang="zh">Boss 战场景关键图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">High-share fantasy composition with a clear scale hook.</span>
+        <span data-lang="zh">具有强比例冲击的奇幻关键图，适合传播。</span>
+      </p>
+      <div class="tags"><span>game</span><span>fantasy</span><span>key-art</span><span>boss</span></div>
+      <pre data-prompt-en="Create AAA fantasy game key art for a colossal stone golem awakening inside a ruined circular arena. A lone armored adult hero stands in the foreground for scale, seen from behind, cloak moving in the wind. Use dramatic low-angle composition, volcanic orange backlight, blue moon rim light, floating ash, cracked marble floor, readable silhouette, and poster-ready negative space at the top. Epic but believable game marketing art, no logos, no text." data-prompt-zh="为一款 AAA 奇幻游戏创建关键宣传图：巨大的石像魔像在圆形废墟竞技场中苏醒。一名成年盔甲英雄背对镜头站在前景，用来体现比例，披风被风吹起。使用低机位戏剧构图、火山橙色逆光、蓝色月光轮廓光、漂浮灰烬、开裂大理石地面、清晰剪影，并在顶部留出适合海报的负空间。史诗但可信的游戏营销图，不要 logo，不要文字。">Create AAA fantasy game key art for a colossal stone golem awakening inside a ruined circular arena. A lone armored adult hero stands in the foreground for scale, seen from behind, cloak moving in the wind. Use dramatic low-angle composition, volcanic orange backlight, blue moon rim light, floating ash, cracked marble floor, readable silhouette, and poster-ready negative space at the top. Epic but believable game marketing art, no logos, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="game-art">
+    <figure>
+      <img src="assets/generated/cyberpunk-samurai-cover.png" alt="Cyberpunk Samurai Cover generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Game Art</span>
+          <span data-lang="zh">游戏艺术</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Cyberpunk Samurai Cover</span>
+        <span data-lang="zh">赛博武士封面</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Vertical key art is useful for social cards and mobile previews.</span>
+        <span data-lang="zh">竖版关键图适合社交卡片和移动端预览。</span>
+      </p>
+      <div class="tags"><span>game</span><span>cyberpunk</span><span>cover</span><span>character</span></div>
+      <pre data-prompt-en="Design vertical cover art for an original cyberpunk action game. Show an adult masked samurai standing on a rain-slick rooftop above a dense neon megacity, holding a glowing glass katana. Use magenta and cyan signs reflected in puddles, strong rim light, mist, distant drones, readable character silhouette, premium console-game box art polish, and no text or branding." data-prompt-zh="为一款原创赛博朋克动作游戏设计竖版封面图。画面中一名成年蒙面武士站在雨后湿滑的屋顶上，脚下是密集霓虹巨城，手持发光玻璃质感武士刀。使用洋红与青色霓虹在水洼中的反射、强轮廓光、雾气、远处无人机、清晰角色剪影、主机游戏盒装封面质感，不要文字或品牌。">Design vertical cover art for an original cyberpunk action game. Show an adult masked samurai standing on a rain-slick rooftop above a dense neon megacity, holding a glowing glass katana. Use magenta and cyan signs reflected in puddles, strong rim light, mist, distant drones, readable character silhouette, premium console-game box art polish, and no text or branding.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="game-art">
+    <figure>
+      <img src="assets/generated/cozy-rpg-village.png" alt="Cozy RPG Village generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Game Art</span>
+          <span data-lang="zh">游戏艺术</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Cozy RPG Village</span>
+        <span data-lang="zh">治愈系 RPG 村庄</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Cozy game assets are broadly shareable and contrast with dark key art.</span>
+        <span data-lang="zh">治愈系游戏资产传播面广，也能和暗黑关键图形成对比。</span>
+      </p>
+      <div class="tags"><span>game</span><span>isometric</span><span>cozy</span><span>environment</span></div>
+      <pre data-prompt-en="Generate isometric game environment art for a cozy RPG village at sunrise. Include a tiny bakery, herb shop, fountain plaza, vegetable gardens, soft smoke from chimneys, small paths, and warm inviting windows. Hand-painted 3D look, soft shadows, readable asset shapes, charming but not childish, texture-ready details, no UI, no text." data-prompt-zh="生成一张治愈系 RPG 村庄的等距游戏环境图，时间为日出。包含小面包店、草药店、喷泉广场、菜园、烟囱柔和炊烟、小路和温暖窗光。手绘 3D 质感、柔和阴影、资产形状清晰、可爱但不幼稚、细节适合贴图参考，不要 UI，不要文字。">Generate isometric game environment art for a cozy RPG village at sunrise. Include a tiny bakery, herb shop, fountain plaza, vegetable gardens, soft smoke from chimneys, small paths, and warm inviting windows. Hand-painted 3D look, soft shadows, readable asset shapes, charming but not childish, texture-ready details, no UI, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="game-art">
+    <figure>
+      <img src="assets/generated/rpg-ability-icons.png" alt="RPG Ability Icon Sheet generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Game Art</span>
+          <span data-lang="zh">游戏艺术</span>
+        </span>
+        <span>1024x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">RPG Ability Icon Sheet</span>
+        <span data-lang="zh">RPG 技能图标套装</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Icon sheets are useful, collectible, and easy to compare.</span>
+        <span data-lang="zh">图标套装实用、可收藏，也方便对比效果。</span>
+      </p>
+      <div class="tags"><span>game</span><span>ui</span><span>icons</span><span>rpg</span></div>
+      <pre data-prompt-en="Create a game UI icon sheet with 16 square fantasy RPG ability icons on a dark transparent-feel background. Include fire burst, ice shield, forest heal, shadow step, thunder strike, arcane orb, stone armor, wind dash, poison blade, solar blessing, moon trap, water surge, blood pact, crystal spear, time slow, and summon gate. Consistent beveled frame, high contrast, readable at small size, no labels, no text." data-prompt-zh="创建一张游戏 UI 图标套装：深色透明感背景上有 16 个方形奇幻 RPG 技能图标。包含火焰爆裂、冰盾、森林治疗、暗影步、雷击、奥术球、石甲、疾风冲刺、毒刃、太阳祝福、月影陷阱、水流冲击、血契、水晶长矛、时间减速和召唤门。统一浮雕边框、高对比、小尺寸可读，不要标签，不要文字。">Create a game UI icon sheet with 16 square fantasy RPG ability icons on a dark transparent-feel background. Include fire burst, ice shield, forest heal, shadow step, thunder strike, arcane orb, stone armor, wind dash, poison blade, solar blessing, moon trap, water surge, blood pact, crystal spear, time slow, and summon gate. Consistent beveled frame, high contrast, readable at small size, no labels, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="anime-character">
+    <figure>
+      <img src="assets/generated/anime-gacha-hero.png" alt="Gacha Hero Splash Art generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Anime Character</span>
+          <span data-lang="zh">二次元角色</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Gacha Hero Splash Art</span>
+        <span data-lang="zh">抽卡角色立绘</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Anime splash art has strong save-and-share behavior.</span>
+        <span data-lang="zh">二次元立绘有很强的收藏和转发属性。</span>
+      </p>
+      <div class="tags"><span>anime</span><span>gacha</span><span>character</span><span>splash-art</span></div>
+      <pre data-prompt-en="Create original anime-style gacha splash art for an adult star navigator heroine. She wears a white and navy expedition coat with small gold hardware, holds a glowing astrolabe, and floats above a shattered observatory floor. Dynamic diagonal pose, star maps swirling behind her, crisp linework, luminous effects, polished mobile game character art, no text, no watermark, no existing franchise style." data-prompt-zh="为一名成年星图领航者女主角创建原创二次元抽卡角色立绘。她穿白色与海军蓝探险外套，带少量金色五金，手持发光星盘，漂浮在破碎天文台地面上。动态斜向姿势，背后星图旋转，线稿清晰，发光特效精致，移动游戏角色美术质感，不要文字、水印或现有 IP 风格。">Create original anime-style gacha splash art for an adult star navigator heroine. She wears a white and navy expedition coat with small gold hardware, holds a glowing astrolabe, and floats above a shattered observatory floor. Dynamic diagonal pose, star maps swirling behind her, crisp linework, luminous effects, polished mobile game character art, no text, no watermark, no existing franchise style.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="anime-character">
+    <figure>
+      <img src="assets/generated/mecha-pilot-portrait.png" alt="Mecha Pilot Portrait generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Anime Character</span>
+          <span data-lang="zh">二次元角色</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Mecha Pilot Portrait</span>
+        <span data-lang="zh">机甲驾驶员肖像</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Pairs character appeal with cinematic lighting.</span>
+        <span data-lang="zh">把角色吸引力和电影感灯光结合起来。</span>
+      </p>
+      <div class="tags"><span>anime</span><span>sci-fi</span><span>portrait</span><span>mecha</span></div>
+      <pre data-prompt-en="Draw an original anime mecha pilot portrait of an adult woman in a white pressure suit inside a cockpit, helmet under one arm, confident calm expression. Reflections from holographic controls light her face, blurred mechanical panels behind her, teal and warm amber palette, crisp cel shading with painterly highlights, premium sci-fi character illustration, no text, no logos." data-prompt-zh="绘制一张原创二次元机甲驾驶员肖像：成年女性穿白色抗压驾驶服坐在驾驶舱内，头盔夹在一侧手臂下，表情冷静自信。全息控制台反光照亮面部，背后机械面板虚化，青色与暖琥珀配色，清晰赛璐璐阴影与绘画感高光，高端科幻角色插画，不要文字，不要 logo。">Draw an original anime mecha pilot portrait of an adult woman in a white pressure suit inside a cockpit, helmet under one arm, confident calm expression. Reflections from holographic controls light her face, blurred mechanical panels behind her, teal and warm amber palette, crisp cel shading with painterly highlights, premium sci-fi character illustration, no text, no logos.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="anime-character">
+    <figure>
+      <img src="assets/generated/dark-fantasy-card.png" alt="Dark Fantasy Card Art generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Anime Character</span>
+          <span data-lang="zh">二次元角色</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Dark Fantasy Card Art</span>
+        <span data-lang="zh">暗黑幻想卡牌图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Dark fantasy character cards are visually sticky in feeds.</span>
+        <span data-lang="zh">暗黑幻想卡牌在信息流里很容易抓眼。</span>
+      </p>
+      <div class="tags"><span>anime</span><span>dark-fantasy</span><span>card-art</span><span>oracle</span></div>
+      <pre data-prompt-en="Create original dark fantasy collectible card art of an adult moonlit oracle standing before a black lake. She wears layered charcoal robes with silver embroidery, holds a cracked mirror, and is surrounded by pale moths and floating candles. Elegant gothic mood, symmetrical composition, detailed fabric, dramatic moon halo, card-art polish, no frame, no text." data-prompt-zh="创建一张原创暗黑幻想收藏卡牌图：成年月光预言者站在黑色湖泊前。她穿多层炭黑长袍，带银色刺绣，手持裂纹镜子，周围有苍白飞蛾和漂浮蜡烛。优雅哥特气质、对称构图、织物细节丰富、戏剧化月晕、卡牌美术质感，不要卡框，不要文字。">Create original dark fantasy collectible card art of an adult moonlit oracle standing before a black lake. She wears layered charcoal robes with silver embroidery, holds a cracked mirror, and is surrounded by pale moths and floating candles. Elegant gothic mood, symmetrical composition, detailed fabric, dramatic moon halo, card-art polish, no frame, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="anime-character">
+    <figure>
+      <img src="assets/generated/idol-stage-poster.png" alt="Virtual Idol Stage Poster generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Anime Character</span>
+          <span data-lang="zh">二次元角色</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Virtual Idol Stage Poster</span>
+        <span data-lang="zh">虚拟偶像舞台海报</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Bright concert imagery gives the gallery a more viral color range.</span>
+        <span data-lang="zh">明亮演唱会画面能拉开 gallery 的传播色域。</span>
+      </p>
+      <div class="tags"><span>anime</span><span>idol</span><span>poster</span><span>stage</span></div>
+      <pre data-prompt-en="Create a bright anime concert poster image for an original adult virtual idol performer on a futuristic stage. She wears a holographic silver-blue outfit, dynamic singing pose, translucent ribbon lights, thousands of tiny glow sticks in the audience, glossy stage reflections, energetic but clean composition, no readable text, no watermark." data-prompt-zh="创建一张明亮的二次元演唱会海报图：原创成年虚拟偶像歌手站在未来舞台上。她穿银蓝色全息舞台服，动态演唱姿势，周围有半透明丝带灯，观众席有大量细小荧光棒，舞台反射光泽明显，构图热烈但干净，不要可读文字，不要水印。">Create a bright anime concert poster image for an original adult virtual idol performer on a futuristic stage. She wears a holographic silver-blue outfit, dynamic singing pose, translucent ribbon lights, thousands of tiny glow sticks in the audience, glossy stage reflections, energetic but clean composition, no readable text, no watermark.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="cinematic-film">
+    <figure>
+      <img src="assets/generated/noir-detective-still.png" alt="Neon Noir Detective Still generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Cinematic Film</span>
+          <span data-lang="zh">影视电影感</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Neon Noir Detective Still</span>
+        <span data-lang="zh">霓虹黑色电影侦探剧照</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Rain, neon, and mystery are reliable visual hooks.</span>
+        <span data-lang="zh">雨夜、霓虹和悬疑是稳定的视觉钩子。</span>
+      </p>
+      <div class="tags"><span>cinematic</span><span>noir</span><span>rain</span><span>film-still</span></div>
+      <pre data-prompt-en="Create a cinematic film still of an adult detective standing under a flickering motel sign during heavy rain at midnight. Trench coat, wet pavement, cigarette smoke replaced by visible cold breath, red and blue neon reflections, 35mm anamorphic lens feel, shallow depth of field, gritty film grain, strong story tension, no text, no logo." data-prompt-zh="创建一张电影剧照：午夜暴雨中，一名成年侦探站在闪烁的汽车旅馆招牌下。风衣、湿地面、用可见冷气替代香烟烟雾、红蓝霓虹反射、35mm 变形宽银幕镜头质感、浅景深、粗粝胶片颗粒、强故事张力，不要文字，不要 logo。">Create a cinematic film still of an adult detective standing under a flickering motel sign during heavy rain at midnight. Trench coat, wet pavement, cigarette smoke replaced by visible cold breath, red and blue neon reflections, 35mm anamorphic lens feel, shallow depth of field, gritty film grain, strong story tension, no text, no logo.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="cinematic-film">
+    <figure>
+      <img src="assets/generated/space-opera-bridge.png" alt="Space Opera Bridge generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Cinematic Film</span>
+          <span data-lang="zh">影视电影感</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Space Opera Bridge</span>
+        <span data-lang="zh">太空歌剧舰桥</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Ultra-wide sci-fi shots work well as gallery hero candidates.</span>
+        <span data-lang="zh">超宽科幻镜头很适合作为 gallery 主视觉候选。</span>
+      </p>
+      <div class="tags"><span>cinematic</span><span>sci-fi</span><span>space</span><span>wide-shot</span></div>
+      <pre data-prompt-en="Create an ultra-wide cinematic frame inside the bridge of an original deep-space exploration vessel. Adult crew silhouettes face a vast observation window showing a blue gas giant and a thin ring system. Use clean production design, cool white panels, amber emergency accents, volumetric light beams, 21:9 composition, premium science-fiction film still, no text." data-prompt-zh="创建一张超宽电影画幅：原创深空探索舰的舰桥内部，成年船员剪影面向巨大的观察窗，窗外是蓝色气态巨行星和细薄行星环。使用干净的美术设计、冷白面板、琥珀色警示点缀、体积光束、21:9 构图、高端科幻电影剧照质感，不要文字。">Create an ultra-wide cinematic frame inside the bridge of an original deep-space exploration vessel. Adult crew silhouettes face a vast observation window showing a blue gas giant and a thin ring system. Use clean production design, cool white panels, amber emergency accents, volumetric light beams, 21:9 composition, premium science-fiction film still, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="cinematic-film">
+    <figure>
+      <img src="assets/generated/desert-chase-frame.png" alt="Desert Chase Frame generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Cinematic Film</span>
+          <span data-lang="zh">影视电影感</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Desert Chase Frame</span>
+        <span data-lang="zh">沙漠追逐电影帧</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Action frames add energy to the collection.</span>
+        <span data-lang="zh">动作电影帧能给合集增加速度感。</span>
+      </p>
+      <div class="tags"><span>cinematic</span><span>action</span><span>desert</span><span>motion</span></div>
+      <pre data-prompt-en="Create a sun-blasted action movie frame of two rugged off-road vehicles racing across a desert salt flat. Dust plumes form a diagonal composition, a storm wall rises in the distance, helicopters are tiny silhouettes near the horizon, warm orange grade, hard noon light, motion blur on foreground rocks, cinematic realism, no text." data-prompt-zh="创建一张阳光炽烈的动作电影帧：两辆粗犷越野车在沙漠盐滩上疾驰。扬尘形成斜向构图，远处升起风暴墙，地平线附近有很小的直升机剪影，暖橙调色、正午硬光、前景石块有运动模糊、电影级写实感，不要文字。">Create a sun-blasted action movie frame of two rugged off-road vehicles racing across a desert salt flat. Dust plumes form a diagonal composition, a storm wall rises in the distance, helicopters are tiny silhouettes near the horizon, warm orange grade, hard noon light, motion blur on foreground rocks, cinematic realism, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="cinematic-film">
+    <figure>
+      <img src="assets/generated/period-drama-window.png" alt="Period Drama Window Light generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Cinematic Film</span>
+          <span data-lang="zh">影视电影感</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Period Drama Window Light</span>
+        <span data-lang="zh">时代剧窗光剧照</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Slower cinematic prompts show range beyond spectacle.</span>
+        <span data-lang="zh">慢节奏电影感样本能展示不止有大场面。</span>
+      </p>
+      <div class="tags"><span>cinematic</span><span>period-drama</span><span>window-light</span><span>mood</span></div>
+      <pre data-prompt-en="Create a quiet period drama film still inside a candlelit study. An adult composer sits by a tall rain-streaked window, reading an unfinished letter beside scattered sheet music. Soft window light, warm candle practicals, muted emerald wallpaper, shallow depth, rich production design, restrained emotional tension, no readable text." data-prompt-zh="创建一张安静的时代剧电影剧照：烛光书房内，一名成年作曲家坐在高大的雨痕窗边，正在读一封未完成的信，旁边散落乐谱。柔和窗光、温暖蜡烛实景光、低饱和祖母绿墙纸、浅景深、丰富美术细节、克制情绪张力，不要可读文字。">Create a quiet period drama film still inside a candlelit study. An adult composer sits by a tall rain-streaked window, reading an unfinished letter beside scattered sheet music. Soft window light, warm candle practicals, muted emerald wallpaper, shallow depth, rich production design, restrained emotional tension, no readable text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="beauty-photography">
+    <figure>
+      <img src="assets/generated/beauty-golden-hour-portrait.png" alt="Golden Hour Beauty Portrait generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Beauty Photo</span>
+          <span data-lang="zh">美女摄影</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Golden Hour Beauty Portrait</span>
+        <span data-lang="zh">黄金时刻美女人像</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Soft beauty portraits are highly clickable when kept tasteful.</span>
+        <span data-lang="zh">克制高级的柔光美女人像点击率通常更好。</span>
+      </p>
+      <div class="tags"><span>beauty</span><span>portrait</span><span>golden-hour</span><span>editorial</span></div>
+      <pre data-prompt-en="Create a tasteful editorial beauty portrait of an adult woman in her late 20s standing in a windswept coastal field at golden hour. Natural makeup, luminous skin texture, linen ivory blouse, hair moving softly, 85mm portrait lens feel, warm backlight, gentle lens flare, shallow depth of field, premium fashion magazine photography, non-sexual, no text." data-prompt-zh="创建一张高级编辑风美女人像：一名 20 多岁后半的成年女性站在黄金时刻的海岸草地中，微风吹动。自然妆容、通透皮肤质感、象牙白亚麻上衣、发丝轻柔飘动、85mm 人像镜头质感、暖逆光、轻微镜头光晕、浅景深、高端时尚杂志摄影，非性感化，不要文字。">Create a tasteful editorial beauty portrait of an adult woman in her late 20s standing in a windswept coastal field at golden hour. Natural makeup, luminous skin texture, linen ivory blouse, hair moving softly, 85mm portrait lens feel, warm backlight, gentle lens flare, shallow depth of field, premium fashion magazine photography, non-sexual, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="beauty-photography">
+    <figure>
+      <img src="assets/generated/neon-beauty-editorial.png" alt="Neon Beauty Editorial generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Beauty Photo</span>
+          <span data-lang="zh">美女摄影</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Neon Beauty Editorial</span>
+        <span data-lang="zh">霓虹美妆大片</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Neon portraits give strong thumbnail contrast.</span>
+        <span data-lang="zh">霓虹人像缩略图对比强，容易吸引注意。</span>
+      </p>
+      <div class="tags"><span>beauty</span><span>fashion</span><span>neon</span><span>studio</span></div>
+      <pre data-prompt-en="Create a high-fashion beauty editorial portrait of an adult woman with glossy black bob hair in a dark studio. Use magenta neon key light, cyan rim light, glass prism reflections across the background, metallic silver eye makeup, glossy black jacket, direct confident gaze, 70mm lens feel, crisp skin detail, non-sexual, no text." data-prompt-zh="创建一张高定美妆大片：暗色影棚中，一名成年女性留光泽黑色波波头。使用洋红霓虹主光、青色轮廓光、背景有玻璃棱镜反射、银色金属感眼妆、亮面黑色外套、直接自信的眼神、70mm 镜头质感、皮肤细节清晰、非性感化，不要文字。">Create a high-fashion beauty editorial portrait of an adult woman with glossy black bob hair in a dark studio. Use magenta neon key light, cyan rim light, glass prism reflections across the background, metallic silver eye makeup, glossy black jacket, direct confident gaze, 70mm lens feel, crisp skin detail, non-sexual, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="beauty-photography">
+    <figure>
+      <img src="assets/generated/vintage-film-model.png" alt="Vintage Film Model generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Beauty Photo</span>
+          <span data-lang="zh">美女摄影</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Vintage Film Model</span>
+        <span data-lang="zh">复古胶片模特照</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Vintage film style is familiar, aspirational, and shareable.</span>
+        <span data-lang="zh">复古胶片风熟悉、向往感强，也适合传播。</span>
+      </p>
+      <div class="tags"><span>beauty</span><span>film</span><span>travel</span><span>fashion</span></div>
+      <pre data-prompt-en="Create a tasteful 1970s-inspired film portrait of an adult fashion model leaning beside a sunlit hotel balcony. Cream silk scarf, oversized sunglasses held in hand, warm faded color, visible 35mm film grain, soft overexposed highlights, Mediterranean architecture in the background, elegant travel editorial mood, non-sexual, no text." data-prompt-zh="创建一张 1970 年代灵感的高级胶片人像：一名成年时装模特倚在阳光照射的酒店阳台旁。奶油色丝巾，手里拿着大框太阳镜，暖色褪色胶片调、可见 35mm 胶片颗粒、柔和过曝高光、背景为地中海建筑，优雅旅行杂志氛围，非性感化，不要文字。">Create a tasteful 1970s-inspired film portrait of an adult fashion model leaning beside a sunlit hotel balcony. Cream silk scarf, oversized sunglasses held in hand, warm faded color, visible 35mm film grain, soft overexposed highlights, Mediterranean architecture in the background, elegant travel editorial mood, non-sexual, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="beauty-photography">
+    <figure>
+      <img src="assets/generated/rainy-window-portrait.png" alt="Rainy Window Portrait generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Beauty Photo</span>
+          <span data-lang="zh">美女摄影</span>
+        </span>
+        <span>1024x1536</span>
+      </p>
+      <h2>
+        <span data-lang="en">Rainy Window Portrait</span>
+        <span data-lang="zh">雨窗情绪人像</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Emotional portraits add story instead of pure glamour.</span>
+        <span data-lang="zh">情绪人像比单纯精致更有故事感。</span>
+      </p>
+      <div class="tags"><span>beauty</span><span>lifestyle</span><span>rain</span><span>portrait</span></div>
+      <pre data-prompt-en="Create an intimate editorial portrait of an adult woman sitting beside a large rainy apartment window at blue hour. Oversized charcoal sweater, natural skin texture, soft reflective window light, blurred city bokeh outside, quiet thoughtful expression, 50mm lens feel, muted blue-grey palette, premium lifestyle photography, non-sexual, no text." data-prompt-zh="创建一张亲密感编辑人像：蓝调时刻，一名成年女性坐在大雨窗边的公寓里。宽松炭灰毛衣、自然皮肤质感、柔和窗面反射光、窗外城市散景虚化、安静思考的表情、50mm 镜头质感、低饱和蓝灰配色、高端生活方式摄影，非性感化，不要文字。">Create an intimate editorial portrait of an adult woman sitting beside a large rainy apartment window at blue hour. Oversized charcoal sweater, natural skin texture, soft reflective window light, blurred city bokeh outside, quiet thoughtful expression, 50mm lens feel, muted blue-grey palette, premium lifestyle photography, non-sexual, no text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="brand-commercial">
     <figure>
       <img src="assets/generated/product-hero.png" alt="Premium Product Hero generated output" loading="lazy">
       <figcaption>
@@ -302,7 +975,10 @@
     </figure>
     <div class="body">
       <p class="eyebrow">
-        <span>gpt-image-2</span>
+        <span>
+          <span data-lang="en">Commercial</span>
+          <span data-lang="zh">商业品牌</span>
+        </span>
         <span>1536x1024</span>
       </p>
       <h2>
@@ -310,8 +986,8 @@
         <span data-lang="zh">高端产品主视觉</span>
       </h2>
       <p class="notes">
-        <span data-lang="en">Strong first demo category because product shots are easy to compare and share.</span>
-        <span data-lang="zh">适合作为首个演示类别，产品图容易对比，也方便传播。</span>
+        <span data-lang="en">Strong commercial demo because product shots are easy to compare and reuse.</span>
+        <span data-lang="zh">商业演示稳定，产品图容易对比和复用。</span>
       </p>
       <div class="tags"><span>product</span><span>commerce</span><span>studio</span><span>brand</span></div>
       <pre data-prompt-en="Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand." data-prompt-zh="为一支哑光白色护肤精华瓶创建高端电商主视觉。产品放在半透明琥珀色亚克力块上，背景为温暖奶油色，使用柔和斜向晨光、细微瓶身水汽和真实玻璃反射，右侧保留足够负空间用于标题文字。标签保持极简，并包含清晰可读文字 'AZHU LABS'。写实棚拍产品摄影，85mm 镜头质感，高端 DTC 品牌风格。">Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand.</pre>
@@ -323,131 +999,7 @@
   </article>
 
 
-  <article class="card" data-category="ui-brand">
-    <figure>
-      <img src="assets/generated/minimal-saas-hero.png" alt="Minimal SaaS Launch Hero generated output" loading="lazy">
-      <figcaption>
-        <span data-lang="en">Generated output</span>
-        <span data-lang="zh">实际生成图</span>
-      </figcaption>
-    </figure>
-    <div class="body">
-      <p class="eyebrow">
-        <span>gpt-image-2</span>
-        <span>1536x1024</span>
-      </p>
-      <h2>
-        <span data-lang="en">Minimal SaaS Launch Hero</span>
-        <span data-lang="zh">极简 SaaS 发布图</span>
-      </h2>
-      <p class="notes">
-        <span data-lang="en">Tests text rendering and structured UI composition.</span>
-        <span data-lang="zh">用于测试文字渲染和结构化 UI 构图。</span>
-      </p>
-      <div class="tags"><span>saas</span><span>ui</span><span>dashboard</span><span>launch</span></div>
-      <pre data-prompt-en="Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text." data-prompt-zh="生成一张精致的 SaaS 发布主视觉：在平静的米白背景上展示悬浮的数据分析 dashboard UI。界面使用克制的黑色、鼠尾草绿和珊瑚色点缀。包含真实可读的文字占位：'Revenue'、'Retention'、'Forecast'、'Weekly active users'。UI 需要清晰、可读，有柔和阴影和产品驱动型创业公司审美。不要人物，不要装饰性光球，不要不可读乱码文字。">Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.</pre>
-      <button class="copy" type="button">
-        <span data-lang="en">Copy prompt</span>
-        <span data-lang="zh">复制提示词</span>
-      </button>
-    </div>
-  </article>
-
-
-  <article class="card" data-category="character-design">
-    <figure>
-      <img src="assets/generated/character-mascot.png" alt="Consistent Helper Mascot generated output" loading="lazy">
-      <figcaption>
-        <span data-lang="en">Generated output</span>
-        <span data-lang="zh">实际生成图</span>
-      </figcaption>
-    </figure>
-    <div class="body">
-      <p class="eyebrow">
-        <span>gpt-image-2</span>
-        <span>1536x1024</span>
-      </p>
-      <h2>
-        <span data-lang="en">Consistent Helper Mascot</span>
-        <span data-lang="zh">一致性助手吉祥物</span>
-      </h2>
-      <p class="notes">
-        <span data-lang="en">Designed to test multi-pose character consistency.</span>
-        <span data-lang="zh">用于测试同一角色在多姿势下的一致性。</span>
-      </p>
-      <div class="tags"><span>character</span><span>mascot</span><span>consistency</span><span>developer-tools</span></div>
-      <pre data-prompt-en="Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses." data-prompt-zh="为一个开发者工具设计友好的 AI 助手吉祥物。角色是紧凑的几何机器人，拥有圆角方形头部、小天线、温暖屏幕表情和简单模块化四肢。使用干净的类矢量 3D 风格，象牙白主体、深石墨色细节和一个小珊瑚色状态灯。同一张图中展示三个姿势：挥手、指向终端、拿着小清单。所有姿势保持一致的轮廓。">Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.</pre>
-      <button class="copy" type="button">
-        <span data-lang="en">Copy prompt</span>
-        <span data-lang="zh">复制提示词</span>
-      </button>
-    </div>
-  </article>
-
-
-  <article class="card" data-category="editorial">
-    <figure>
-      <img src="assets/generated/editorial-header.png" alt="Editorial AI Essay Header generated output" loading="lazy">
-      <figcaption>
-        <span data-lang="en">Generated output</span>
-        <span data-lang="zh">实际生成图</span>
-      </figcaption>
-    </figure>
-    <div class="body">
-      <p class="eyebrow">
-        <span>gpt-image-2</span>
-        <span>1536x1024</span>
-      </p>
-      <h2>
-        <span data-lang="en">Editorial AI Essay Header</span>
-        <span data-lang="zh">AI 文章编辑头图</span>
-      </h2>
-      <p class="notes">
-        <span data-lang="en">Good for blog and social share assets.</span>
-        <span data-lang="zh">适合博客和社交媒体预览图。</span>
-      </p>
-      <div class="tags"><span>editorial</span><span>blog</span><span>magazine</span><span>technology</span></div>
-      <pre data-prompt-en="Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography." data-prompt-zh="为一篇题为 'The New Visual Language of AI Products' 的文章创建电影感编辑头图。画面中有安静的工作桌、打印出来的图像 contact sheets、一台打开 prompt editor 的笔记本电脑，以及墙上固定的色彩研究板。情绪：思考感、精确、创造性工程。使用自然窗光、低饱和橄榄色和铁锈色点缀、浅景深、高端科技杂志风格。左上方保留干净空间用于标题排版。">Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.</pre>
-      <button class="copy" type="button">
-        <span data-lang="en">Copy prompt</span>
-        <span data-lang="zh">复制提示词</span>
-      </button>
-    </div>
-  </article>
-
-
-  <article class="card" data-category="diagram">
-    <figure>
-      <img src="assets/generated/isometric-workflow.png" alt="Isometric Workflow Diagram generated output" loading="lazy">
-      <figcaption>
-        <span data-lang="en">Generated output</span>
-        <span data-lang="zh">实际生成图</span>
-      </figcaption>
-    </figure>
-    <div class="body">
-      <p class="eyebrow">
-        <span>gpt-image-2</span>
-        <span>1536x1024</span>
-      </p>
-      <h2>
-        <span data-lang="en">Isometric Workflow Diagram</span>
-        <span data-lang="zh">等距工作流图</span>
-      </h2>
-      <p class="notes">
-        <span data-lang="en">Tests diagram label rendering and layout control.</span>
-        <span data-lang="zh">用于测试图示标签渲染和布局控制。</span>
-      </p>
-      <div class="tags"><span>diagram</span><span>workflow</span><span>documentation</span><span>isometric</span></div>
-      <pre data-prompt-en="Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter." data-prompt-zh="生成一张干净的等距图，解释 AI 图像提示词工作流。包含五个清晰标签阶段：'Idea'、'Prompt'、'Generate'、'Evaluate'、'Refine'。使用简单几何工作台，并用细线连接。标签需要清晰可读。风格：现代技术文档、白色背景、深石墨线条、少量珊瑚色和蓝绿色点缀，不要杂乱。">Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.</pre>
-      <button class="copy" type="button">
-        <span data-lang="en">Copy prompt</span>
-        <span data-lang="zh">复制提示词</span>
-      </button>
-    </div>
-  </article>
-
-
-  <article class="card" data-category="brand-design">
+  <article class="card" data-category="brand-commercial">
     <figure>
       <img src="assets/generated/packaging-system.png" alt="Brand Packaging System generated output" loading="lazy">
       <figcaption>
@@ -457,7 +1009,10 @@
     </figure>
     <div class="body">
       <p class="eyebrow">
-        <span>gpt-image-2</span>
+        <span>
+          <span data-lang="en">Commercial</span>
+          <span data-lang="zh">商业品牌</span>
+        </span>
         <span>1536x1024</span>
       </p>
       <h2>
@@ -478,7 +1033,143 @@
   </article>
 
 
-  <article class="card" data-category="architecture">
+  <article class="card" data-category="brand-commercial">
+    <figure>
+      <img src="assets/generated/minimal-saas-hero.png" alt="Minimal SaaS Launch Hero generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Commercial</span>
+          <span data-lang="zh">商业品牌</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Minimal SaaS Launch Hero</span>
+        <span data-lang="zh">极简 SaaS 发布图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Tests text rendering and structured UI composition.</span>
+        <span data-lang="zh">用于测试文字渲染和结构化 UI 构图。</span>
+      </p>
+      <div class="tags"><span>saas</span><span>ui</span><span>dashboard</span><span>launch</span></div>
+      <pre data-prompt-en="Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text." data-prompt-zh="生成一张精致的 SaaS 发布主视觉：在平静的米白背景上展示悬浮的数据分析 dashboard UI。界面使用克制的黑色、鼠尾草绿和珊瑚色点缀。包含真实可读的文字占位：'Revenue'、'Retention'、'Forecast'、'Weekly active users'。UI 需要清晰、可读，有柔和阴影和产品驱动型创业公司审美。不要人物，不要装饰性光球，不要不可读乱码文字。">Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="brand-commercial">
+    <figure>
+      <img src="assets/generated/editorial-header.png" alt="Editorial AI Essay Header generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Commercial</span>
+          <span data-lang="zh">商业品牌</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Editorial AI Essay Header</span>
+        <span data-lang="zh">AI 文章编辑头图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Good for blog and social share assets.</span>
+        <span data-lang="zh">适合博客和社交媒体预览图。</span>
+      </p>
+      <div class="tags"><span>editorial</span><span>blog</span><span>magazine</span><span>technology</span></div>
+      <pre data-prompt-en="Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography." data-prompt-zh="为一篇题为 'The New Visual Language of AI Products' 的文章创建电影感编辑头图。画面中有安静的工作桌、打印出来的图像 contact sheets、一台打开 prompt editor 的笔记本电脑，以及墙上固定的色彩研究板。情绪：思考感、精确、创造性工程。使用自然窗光、低饱和橄榄色和铁锈色点缀、浅景深、高端科技杂志风格。左上方保留干净空间用于标题排版。">Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="utility-design">
+    <figure>
+      <img src="assets/generated/character-mascot.png" alt="Consistent Helper Mascot generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Utility Design</span>
+          <span data-lang="zh">实用设计</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Consistent Helper Mascot</span>
+        <span data-lang="zh">一致性助手吉祥物</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Designed to test multi-pose character consistency.</span>
+        <span data-lang="zh">用于测试同一角色在多姿势下的一致性。</span>
+      </p>
+      <div class="tags"><span>character</span><span>mascot</span><span>consistency</span><span>developer-tools</span></div>
+      <pre data-prompt-en="Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses." data-prompt-zh="为一个开发者工具设计友好的 AI 助手吉祥物。角色是紧凑的几何机器人，拥有圆角方形头部、小天线、温暖屏幕表情和简单模块化四肢。使用干净的类矢量 3D 风格，象牙白主体、深石墨色细节和一个小珊瑚色状态灯。同一张图中展示三个姿势：挥手、指向终端、拿着小清单。所有姿势保持一致的轮廓。">Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="utility-design">
+    <figure>
+      <img src="assets/generated/isometric-workflow.png" alt="Isometric Workflow Diagram generated output" loading="lazy">
+      <figcaption>
+        <span data-lang="en">Generated output</span>
+        <span data-lang="zh">实际生成图</span>
+      </figcaption>
+    </figure>
+    <div class="body">
+      <p class="eyebrow">
+        <span>
+          <span data-lang="en">Utility Design</span>
+          <span data-lang="zh">实用设计</span>
+        </span>
+        <span>1536x1024</span>
+      </p>
+      <h2>
+        <span data-lang="en">Isometric Workflow Diagram</span>
+        <span data-lang="zh">等距工作流图</span>
+      </h2>
+      <p class="notes">
+        <span data-lang="en">Tests diagram label rendering and layout control.</span>
+        <span data-lang="zh">用于测试图示标签渲染和布局控制。</span>
+      </p>
+      <div class="tags"><span>diagram</span><span>workflow</span><span>documentation</span><span>isometric</span></div>
+      <pre data-prompt-en="Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter." data-prompt-zh="生成一张干净的等距图，解释 AI 图像提示词工作流。包含五个清晰标签阶段：'Idea'、'Prompt'、'Generate'、'Evaluate'、'Refine'。使用简单几何工作台，并用细线连接。标签需要清晰可读。风格：现代技术文档、白色背景、深石墨线条、少量珊瑚色和蓝绿色点缀，不要杂乱。">Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.</pre>
+      <button class="copy" type="button">
+        <span data-lang="en">Copy prompt</span>
+        <span data-lang="zh">复制提示词</span>
+      </button>
+    </div>
+  </article>
+
+
+  <article class="card" data-category="utility-design">
     <figure>
       <img src="assets/generated/architectural-concept.png" alt="Small Pavilion Concept generated output" loading="lazy">
       <figcaption>
@@ -488,7 +1179,10 @@
     </figure>
     <div class="body">
       <p class="eyebrow">
-        <span>gpt-image-2</span>
+        <span>
+          <span data-lang="en">Utility Design</span>
+          <span data-lang="zh">实用设计</span>
+        </span>
         <span>1536x1024</span>
       </p>
       <h2>
@@ -509,7 +1203,7 @@
   </article>
 
 
-  <article class="card" data-category="illustration">
+  <article class="card" data-category="utility-design">
     <figure>
       <img src="assets/generated/sticker-sheet.png" alt="Developer Sticker Sheet generated output" loading="lazy">
       <figcaption>
@@ -519,7 +1213,10 @@
     </figure>
     <div class="body">
       <p class="eyebrow">
-        <span>gpt-image-2</span>
+        <span>
+          <span data-lang="en">Utility Design</span>
+          <span data-lang="zh">实用设计</span>
+        </span>
         <span>1024x1024</span>
       </p>
       <h2>

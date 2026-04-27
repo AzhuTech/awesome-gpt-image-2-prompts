@@ -7,14 +7,19 @@ const repoRoot = path.resolve(__dirname, "..");
 
 await loadEnv(path.join(repoRoot, ".env"));
 
-const promptId = process.argv[2] ?? "product-hero";
-const generateAll = promptId === "all" || process.argv.includes("--all");
+const args = process.argv.slice(2);
+const promptIds = args.filter((arg) => !arg.startsWith("--"));
+const generateAll = promptIds.includes("all") || args.includes("--all");
+const generateMissing = args.includes("--missing");
 const catalogPath = path.join(repoRoot, "catalog/prompts.json");
 const prompts = JSON.parse(await readFile(catalogPath, "utf8"));
-const entries = generateAll ? prompts : prompts.filter((item) => item.id === promptId);
+const selectedIds = promptIds.filter((id) => id !== "all");
+const entries = generateAll || selectedIds.length === 0
+  ? prompts
+  : prompts.filter((item) => selectedIds.includes(item.id));
 
 if (entries.length === 0) {
-  console.error(`Unknown prompt id: ${promptId}`);
+  console.error(`Unknown prompt id: ${selectedIds.join(", ")}`);
   console.error(`Available ids: ${prompts.map((item) => item.id).join(", ")}`);
   process.exit(1);
 }
@@ -25,6 +30,10 @@ await mkdir(outputDir, { recursive: true });
 
 for (const entry of entries) {
   const outputPath = path.join(outputDir, `${entry.id}.png`);
+  if (generateMissing && await fileExists(outputPath)) {
+    console.log(`skip existing ${path.relative(repoRoot, outputPath)}`);
+    continue;
+  }
   console.log(`generating ${entry.id} -> ${path.relative(repoRoot, outputPath)}`);
   const result = await generateImage(entry, config);
   const image = result.data?.[0];
@@ -35,6 +44,15 @@ for (const entry of entries) {
 
   await writeFile(outputPath, Buffer.from(image.b64_json, "base64"));
   console.log(`wrote ${path.relative(repoRoot, outputPath)}`);
+}
+
+async function fileExists(filePath) {
+  try {
+    await access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 async function generateImage(entry, config) {
@@ -56,28 +74,48 @@ async function generateImage(entry, config) {
 
   let lastError;
   for (const body of attempts) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), config.timeoutMs);
-    const response = await fetch(config.generationUrl, {
-      method: "POST",
-      headers: config.headers,
-      body: JSON.stringify(body),
-      signal: controller.signal
-    }).finally(() => clearTimeout(timeout));
-    const text = await response.text();
-    const data = parseJson(text);
+    for (let retry = 0; retry <= config.maxRetries; retry += 1) {
+      try {
+        const response = await requestImage(config, body);
+        const text = await response.text();
+        const data = parseJson(text);
 
-    if (response.ok) {
-      return data;
-    }
+        if (response.ok) {
+          return data;
+        }
 
-    lastError = new Error(formatApiError(response, data, text));
-    if (![400, 422].includes(response.status)) {
-      break;
+        lastError = new Error(formatApiError(response, data, text));
+        if (![408, 409, 425, 429, 500, 502, 503, 504].includes(response.status)) {
+          break;
+        }
+      } catch (error) {
+        lastError = error;
+      }
+
+      if (retry < config.maxRetries) {
+        const delayMs = retryDelay(retry);
+        console.warn(`retry ${retry + 1}/${config.maxRetries} after ${delayMs}ms: ${lastError.message}`);
+        await sleep(delayMs);
+      }
     }
   }
 
   throw lastError;
+}
+
+async function requestImage(config, body) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), config.timeoutMs);
+  try {
+    return await fetch(config.generationUrl, {
+      method: "POST",
+      headers: config.headers,
+      body: JSON.stringify(body),
+      signal: controller.signal
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 async function loadEnv(filePath) {
@@ -124,7 +162,8 @@ function readConfig() {
       generationUrl: new URL("images/generations", ensureTrailingSlash(baseUrl)).toString(),
       model: deployment,
       headers: authHeaders(apiKey, azureLike),
-      timeoutMs: readTimeout()
+      timeoutMs: readTimeout(),
+      maxRetries: readRetries()
     };
   }
 
@@ -134,7 +173,8 @@ function readConfig() {
       generationUrl: `${base}openai/deployments/${encodeURIComponent(deployment)}/images/generations?api-version=${encodeURIComponent(apiVersion)}`,
       model: deployment,
       headers: authHeaders(apiKey, true),
-      timeoutMs: readTimeout()
+      timeoutMs: readTimeout(),
+      maxRetries: readRetries()
     };
   }
 
@@ -143,7 +183,8 @@ function readConfig() {
       generationUrl: "https://api.openai.com/v1/images/generations",
       model: undefined,
       headers: authHeaders(apiKey, false),
-      timeoutMs: readTimeout()
+      timeoutMs: readTimeout(),
+      maxRetries: readRetries()
     };
   }
 
@@ -163,6 +204,18 @@ function authHeaders(apiKey, azureLike) {
 
 function readTimeout() {
   return Number(process.env.IMAGE_REQUEST_TIMEOUT_MS ?? 600000);
+}
+
+function readRetries() {
+  return Number(process.env.IMAGE_REQUEST_RETRIES ?? 3);
+}
+
+function retryDelay(retry) {
+  return Math.min(60000, 5000 * 2 ** retry);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function ensureTrailingSlash(value) {

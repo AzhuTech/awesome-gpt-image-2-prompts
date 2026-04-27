@@ -1,9 +1,297 @@
 [
   {
+    "id": "boss-arena-key-art",
+    "title": "Boss Arena Key Art",
+    "title_zh": "Boss 战场景关键图",
+    "category": "game-art",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/boss-arena-key-art.png",
+    "prompt": "Create AAA fantasy game key art for a colossal stone golem awakening inside a ruined circular arena. A lone armored adult hero stands in the foreground for scale, seen from behind, cloak moving in the wind. Use dramatic low-angle composition, volcanic orange backlight, blue moon rim light, floating ash, cracked marble floor, readable silhouette, and poster-ready negative space at the top. Epic but believable game marketing art, no logos, no text.",
+    "prompt_zh": "为一款 AAA 奇幻游戏创建关键宣传图：巨大的石像魔像在圆形废墟竞技场中苏醒。一名成年盔甲英雄背对镜头站在前景，用来体现比例，披风被风吹起。使用低机位戏剧构图、火山橙色逆光、蓝色月光轮廓光、漂浮灰烬、开裂大理石地面、清晰剪影，并在顶部留出适合海报的负空间。史诗但可信的游戏营销图，不要 logo，不要文字。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["game", "fantasy", "key-art", "boss"],
+    "notes": "High-share fantasy composition with a clear scale hook.",
+    "notes_zh": "具有强比例冲击的奇幻关键图，适合传播。"
+  },
+  {
+    "id": "cyberpunk-samurai-cover",
+    "title": "Cyberpunk Samurai Cover",
+    "title_zh": "赛博武士封面",
+    "category": "game-art",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/cyberpunk-samurai-cover.png",
+    "prompt": "Design vertical cover art for an original cyberpunk action game. Show an adult masked samurai standing on a rain-slick rooftop above a dense neon megacity, holding a glowing glass katana. Use magenta and cyan signs reflected in puddles, strong rim light, mist, distant drones, readable character silhouette, premium console-game box art polish, and no text or branding.",
+    "prompt_zh": "为一款原创赛博朋克动作游戏设计竖版封面图。画面中一名成年蒙面武士站在雨后湿滑的屋顶上，脚下是密集霓虹巨城，手持发光玻璃质感武士刀。使用洋红与青色霓虹在水洼中的反射、强轮廓光、雾气、远处无人机、清晰角色剪影、主机游戏盒装封面质感，不要文字或品牌。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["game", "cyberpunk", "cover", "character"],
+    "notes": "Vertical key art is useful for social cards and mobile previews.",
+    "notes_zh": "竖版关键图适合社交卡片和移动端预览。"
+  },
+  {
+    "id": "cozy-rpg-village",
+    "title": "Cozy RPG Village",
+    "title_zh": "治愈系 RPG 村庄",
+    "category": "game-art",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/cozy-rpg-village.png",
+    "prompt": "Generate isometric game environment art for a cozy RPG village at sunrise. Include a tiny bakery, herb shop, fountain plaza, vegetable gardens, soft smoke from chimneys, small paths, and warm inviting windows. Hand-painted 3D look, soft shadows, readable asset shapes, charming but not childish, texture-ready details, no UI, no text.",
+    "prompt_zh": "生成一张治愈系 RPG 村庄的等距游戏环境图，时间为日出。包含小面包店、草药店、喷泉广场、菜园、烟囱柔和炊烟、小路和温暖窗光。手绘 3D 质感、柔和阴影、资产形状清晰、可爱但不幼稚、细节适合贴图参考，不要 UI，不要文字。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["game", "isometric", "cozy", "environment"],
+    "notes": "Cozy game assets are broadly shareable and contrast with dark key art.",
+    "notes_zh": "治愈系游戏资产传播面广，也能和暗黑关键图形成对比。"
+  },
+  {
+    "id": "rpg-ability-icons",
+    "title": "RPG Ability Icon Sheet",
+    "title_zh": "RPG 技能图标套装",
+    "category": "game-art",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/rpg-ability-icons.png",
+    "prompt": "Create a game UI icon sheet with 16 square fantasy RPG ability icons on a dark transparent-feel background. Include fire burst, ice shield, forest heal, shadow step, thunder strike, arcane orb, stone armor, wind dash, poison blade, solar blessing, moon trap, water surge, blood pact, crystal spear, time slow, and summon gate. Consistent beveled frame, high contrast, readable at small size, no labels, no text.",
+    "prompt_zh": "创建一张游戏 UI 图标套装：深色透明感背景上有 16 个方形奇幻 RPG 技能图标。包含火焰爆裂、冰盾、森林治疗、暗影步、雷击、奥术球、石甲、疾风冲刺、毒刃、太阳祝福、月影陷阱、水流冲击、血契、水晶长矛、时间减速和召唤门。统一浮雕边框、高对比、小尺寸可读，不要标签，不要文字。",
+    "recommended_settings": {
+      "size": "1024x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["game", "ui", "icons", "rpg"],
+    "notes": "Icon sheets are useful, collectible, and easy to compare.",
+    "notes_zh": "图标套装实用、可收藏，也方便对比效果。"
+  },
+  {
+    "id": "anime-gacha-hero",
+    "title": "Gacha Hero Splash Art",
+    "title_zh": "抽卡角色立绘",
+    "category": "anime-character",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/anime-gacha-hero.png",
+    "prompt": "Create original anime-style gacha splash art for an adult star navigator heroine. She wears a white and navy expedition coat with small gold hardware, holds a glowing astrolabe, and floats above a shattered observatory floor. Dynamic diagonal pose, star maps swirling behind her, crisp linework, luminous effects, polished mobile game character art, no text, no watermark, no existing franchise style.",
+    "prompt_zh": "为一名成年星图领航者女主角创建原创二次元抽卡角色立绘。她穿白色与海军蓝探险外套，带少量金色五金，手持发光星盘，漂浮在破碎天文台地面上。动态斜向姿势，背后星图旋转，线稿清晰，发光特效精致，移动游戏角色美术质感，不要文字、水印或现有 IP 风格。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["anime", "gacha", "character", "splash-art"],
+    "notes": "Anime splash art has strong save-and-share behavior.",
+    "notes_zh": "二次元立绘有很强的收藏和转发属性。"
+  },
+  {
+    "id": "mecha-pilot-portrait",
+    "title": "Mecha Pilot Portrait",
+    "title_zh": "机甲驾驶员肖像",
+    "category": "anime-character",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/mecha-pilot-portrait.png",
+    "prompt": "Draw an original anime mecha pilot portrait of an adult woman in a white pressure suit inside a cockpit, helmet under one arm, confident calm expression. Reflections from holographic controls light her face, blurred mechanical panels behind her, teal and warm amber palette, crisp cel shading with painterly highlights, premium sci-fi character illustration, no text, no logos.",
+    "prompt_zh": "绘制一张原创二次元机甲驾驶员肖像：成年女性穿白色抗压驾驶服坐在驾驶舱内，头盔夹在一侧手臂下，表情冷静自信。全息控制台反光照亮面部，背后机械面板虚化，青色与暖琥珀配色，清晰赛璐璐阴影与绘画感高光，高端科幻角色插画，不要文字，不要 logo。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["anime", "sci-fi", "portrait", "mecha"],
+    "notes": "Pairs character appeal with cinematic lighting.",
+    "notes_zh": "把角色吸引力和电影感灯光结合起来。"
+  },
+  {
+    "id": "dark-fantasy-card",
+    "title": "Dark Fantasy Card Art",
+    "title_zh": "暗黑幻想卡牌图",
+    "category": "anime-character",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/dark-fantasy-card.png",
+    "prompt": "Create original dark fantasy collectible card art of an adult moonlit oracle standing before a black lake. She wears layered charcoal robes with silver embroidery, holds a cracked mirror, and is surrounded by pale moths and floating candles. Elegant gothic mood, symmetrical composition, detailed fabric, dramatic moon halo, card-art polish, no frame, no text.",
+    "prompt_zh": "创建一张原创暗黑幻想收藏卡牌图：成年月光预言者站在黑色湖泊前。她穿多层炭黑长袍，带银色刺绣，手持裂纹镜子，周围有苍白飞蛾和漂浮蜡烛。优雅哥特气质、对称构图、织物细节丰富、戏剧化月晕、卡牌美术质感，不要卡框，不要文字。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["anime", "dark-fantasy", "card-art", "oracle"],
+    "notes": "Dark fantasy character cards are visually sticky in feeds.",
+    "notes_zh": "暗黑幻想卡牌在信息流里很容易抓眼。"
+  },
+  {
+    "id": "idol-stage-poster",
+    "title": "Virtual Idol Stage Poster",
+    "title_zh": "虚拟偶像舞台海报",
+    "category": "anime-character",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/idol-stage-poster.png",
+    "prompt": "Create a bright anime concert poster image for an original adult virtual idol performer on a futuristic stage. She wears a holographic silver-blue outfit, dynamic singing pose, translucent ribbon lights, thousands of tiny glow sticks in the audience, glossy stage reflections, energetic but clean composition, no readable text, no watermark.",
+    "prompt_zh": "创建一张明亮的二次元演唱会海报图：原创成年虚拟偶像歌手站在未来舞台上。她穿银蓝色全息舞台服，动态演唱姿势，周围有半透明丝带灯，观众席有大量细小荧光棒，舞台反射光泽明显，构图热烈但干净，不要可读文字，不要水印。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["anime", "idol", "poster", "stage"],
+    "notes": "Bright concert imagery gives the gallery a more viral color range.",
+    "notes_zh": "明亮演唱会画面能拉开 gallery 的传播色域。"
+  },
+  {
+    "id": "noir-detective-still",
+    "title": "Neon Noir Detective Still",
+    "title_zh": "霓虹黑色电影侦探剧照",
+    "category": "cinematic-film",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/noir-detective-still.png",
+    "prompt": "Create a cinematic film still of an adult detective standing under a flickering motel sign during heavy rain at midnight. Trench coat, wet pavement, cigarette smoke replaced by visible cold breath, red and blue neon reflections, 35mm anamorphic lens feel, shallow depth of field, gritty film grain, strong story tension, no text, no logo.",
+    "prompt_zh": "创建一张电影剧照：午夜暴雨中，一名成年侦探站在闪烁的汽车旅馆招牌下。风衣、湿地面、用可见冷气替代香烟烟雾、红蓝霓虹反射、35mm 变形宽银幕镜头质感、浅景深、粗粝胶片颗粒、强故事张力，不要文字，不要 logo。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["cinematic", "noir", "rain", "film-still"],
+    "notes": "Rain, neon, and mystery are reliable visual hooks.",
+    "notes_zh": "雨夜、霓虹和悬疑是稳定的视觉钩子。"
+  },
+  {
+    "id": "space-opera-bridge",
+    "title": "Space Opera Bridge",
+    "title_zh": "太空歌剧舰桥",
+    "category": "cinematic-film",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/space-opera-bridge.png",
+    "prompt": "Create an ultra-wide cinematic frame inside the bridge of an original deep-space exploration vessel. Adult crew silhouettes face a vast observation window showing a blue gas giant and a thin ring system. Use clean production design, cool white panels, amber emergency accents, volumetric light beams, 21:9 composition, premium science-fiction film still, no text.",
+    "prompt_zh": "创建一张超宽电影画幅：原创深空探索舰的舰桥内部，成年船员剪影面向巨大的观察窗，窗外是蓝色气态巨行星和细薄行星环。使用干净的美术设计、冷白面板、琥珀色警示点缀、体积光束、21:9 构图、高端科幻电影剧照质感，不要文字。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["cinematic", "sci-fi", "space", "wide-shot"],
+    "notes": "Ultra-wide sci-fi shots work well as gallery hero candidates.",
+    "notes_zh": "超宽科幻镜头很适合作为 gallery 主视觉候选。"
+  },
+  {
+    "id": "desert-chase-frame",
+    "title": "Desert Chase Frame",
+    "title_zh": "沙漠追逐电影帧",
+    "category": "cinematic-film",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/desert-chase-frame.png",
+    "prompt": "Create a sun-blasted action movie frame of two rugged off-road vehicles racing across a desert salt flat. Dust plumes form a diagonal composition, a storm wall rises in the distance, helicopters are tiny silhouettes near the horizon, warm orange grade, hard noon light, motion blur on foreground rocks, cinematic realism, no text.",
+    "prompt_zh": "创建一张阳光炽烈的动作电影帧：两辆粗犷越野车在沙漠盐滩上疾驰。扬尘形成斜向构图，远处升起风暴墙，地平线附近有很小的直升机剪影，暖橙调色、正午硬光、前景石块有运动模糊、电影级写实感，不要文字。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["cinematic", "action", "desert", "motion"],
+    "notes": "Action frames add energy to the collection.",
+    "notes_zh": "动作电影帧能给合集增加速度感。"
+  },
+  {
+    "id": "period-drama-window",
+    "title": "Period Drama Window Light",
+    "title_zh": "时代剧窗光剧照",
+    "category": "cinematic-film",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/period-drama-window.png",
+    "prompt": "Create a quiet period drama film still inside a candlelit study. An adult composer sits by a tall rain-streaked window, reading an unfinished letter beside scattered sheet music. Soft window light, warm candle practicals, muted emerald wallpaper, shallow depth, rich production design, restrained emotional tension, no readable text.",
+    "prompt_zh": "创建一张安静的时代剧电影剧照：烛光书房内，一名成年作曲家坐在高大的雨痕窗边，正在读一封未完成的信，旁边散落乐谱。柔和窗光、温暖蜡烛实景光、低饱和祖母绿墙纸、浅景深、丰富美术细节、克制情绪张力，不要可读文字。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["cinematic", "period-drama", "window-light", "mood"],
+    "notes": "Slower cinematic prompts show range beyond spectacle.",
+    "notes_zh": "慢节奏电影感样本能展示不止有大场面。"
+  },
+  {
+    "id": "beauty-golden-hour-portrait",
+    "title": "Golden Hour Beauty Portrait",
+    "title_zh": "黄金时刻美女人像",
+    "category": "beauty-photography",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/beauty-golden-hour-portrait.png",
+    "prompt": "Create a tasteful editorial beauty portrait of an adult woman in her late 20s standing in a windswept coastal field at golden hour. Natural makeup, luminous skin texture, linen ivory blouse, hair moving softly, 85mm portrait lens feel, warm backlight, gentle lens flare, shallow depth of field, premium fashion magazine photography, non-sexual, no text.",
+    "prompt_zh": "创建一张高级编辑风美女人像：一名 20 多岁后半的成年女性站在黄金时刻的海岸草地中，微风吹动。自然妆容、通透皮肤质感、象牙白亚麻上衣、发丝轻柔飘动、85mm 人像镜头质感、暖逆光、轻微镜头光晕、浅景深、高端时尚杂志摄影，非性感化，不要文字。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["beauty", "portrait", "golden-hour", "editorial"],
+    "notes": "Soft beauty portraits are highly clickable when kept tasteful.",
+    "notes_zh": "克制高级的柔光美女人像点击率通常更好。"
+  },
+  {
+    "id": "neon-beauty-editorial",
+    "title": "Neon Beauty Editorial",
+    "title_zh": "霓虹美妆大片",
+    "category": "beauty-photography",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/neon-beauty-editorial.png",
+    "prompt": "Create a high-fashion beauty editorial portrait of an adult woman with glossy black bob hair in a dark studio. Use magenta neon key light, cyan rim light, glass prism reflections across the background, metallic silver eye makeup, glossy black jacket, direct confident gaze, 70mm lens feel, crisp skin detail, non-sexual, no text.",
+    "prompt_zh": "创建一张高定美妆大片：暗色影棚中，一名成年女性留光泽黑色波波头。使用洋红霓虹主光、青色轮廓光、背景有玻璃棱镜反射、银色金属感眼妆、亮面黑色外套、直接自信的眼神、70mm 镜头质感、皮肤细节清晰、非性感化，不要文字。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["beauty", "fashion", "neon", "studio"],
+    "notes": "Neon portraits give strong thumbnail contrast.",
+    "notes_zh": "霓虹人像缩略图对比强，容易吸引注意。"
+  },
+  {
+    "id": "vintage-film-model",
+    "title": "Vintage Film Model",
+    "title_zh": "复古胶片模特照",
+    "category": "beauty-photography",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/vintage-film-model.png",
+    "prompt": "Create a tasteful 1970s-inspired film portrait of an adult fashion model leaning beside a sunlit hotel balcony. Cream silk scarf, oversized sunglasses held in hand, warm faded color, visible 35mm film grain, soft overexposed highlights, Mediterranean architecture in the background, elegant travel editorial mood, non-sexual, no text.",
+    "prompt_zh": "创建一张 1970 年代灵感的高级胶片人像：一名成年时装模特倚在阳光照射的酒店阳台旁。奶油色丝巾，手里拿着大框太阳镜，暖色褪色胶片调、可见 35mm 胶片颗粒、柔和过曝高光、背景为地中海建筑，优雅旅行杂志氛围，非性感化，不要文字。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["beauty", "film", "travel", "fashion"],
+    "notes": "Vintage film style is familiar, aspirational, and shareable.",
+    "notes_zh": "复古胶片风熟悉、向往感强，也适合传播。"
+  },
+  {
+    "id": "rainy-window-portrait",
+    "title": "Rainy Window Portrait",
+    "title_zh": "雨窗情绪人像",
+    "category": "beauty-photography",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/rainy-window-portrait.png",
+    "prompt": "Create an intimate editorial portrait of an adult woman sitting beside a large rainy apartment window at blue hour. Oversized charcoal sweater, natural skin texture, soft reflective window light, blurred city bokeh outside, quiet thoughtful expression, 50mm lens feel, muted blue-grey palette, premium lifestyle photography, non-sexual, no text.",
+    "prompt_zh": "创建一张亲密感编辑人像：蓝调时刻，一名成年女性坐在大雨窗边的公寓里。宽松炭灰毛衣、自然皮肤质感、柔和窗面反射光、窗外城市散景虚化、安静思考的表情、50mm 镜头质感、低饱和蓝灰配色、高端生活方式摄影，非性感化，不要文字。",
+    "recommended_settings": {
+      "size": "1024x1536",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["beauty", "lifestyle", "rain", "portrait"],
+    "notes": "Emotional portraits add story instead of pure glamour.",
+    "notes_zh": "情绪人像比单纯精致更有故事感。"
+  },
+  {
     "id": "product-hero",
     "title": "Premium Product Hero",
     "title_zh": "高端产品主视觉",
-    "category": "product-photography",
+    "category": "brand-commercial",
     "model": "gpt-image-2",
     "preview_image": "assets/generated/product-hero.png",
     "prompt": "Create a premium e-commerce hero image for a matte white skincare serum bottle on translucent amber acrylic blocks. Use a warm cream background, soft diagonal morning light, subtle condensation on the bottle, realistic glass reflections, and enough negative space on the right for headline text. Keep the label minimal with the readable text 'AZHU LABS'. Photorealistic studio product photography, 85mm lens feel, high-end direct-to-consumer brand.",
@@ -14,86 +302,14 @@
       "background": "opaque"
     },
     "tags": ["product", "commerce", "studio", "brand"],
-    "notes": "Strong first demo category because product shots are easy to compare and share.",
-    "notes_zh": "适合作为首个演示类别，产品图容易对比，也方便传播。"
-  },
-  {
-    "id": "minimal-saas-hero",
-    "title": "Minimal SaaS Launch Hero",
-    "title_zh": "极简 SaaS 发布图",
-    "category": "ui-brand",
-    "model": "gpt-image-2",
-    "preview_image": "assets/generated/minimal-saas-hero.png",
-    "prompt": "Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.",
-    "prompt_zh": "生成一张精致的 SaaS 发布主视觉：在平静的米白背景上展示悬浮的数据分析 dashboard UI。界面使用克制的黑色、鼠尾草绿和珊瑚色点缀。包含真实可读的文字占位：'Revenue'、'Retention'、'Forecast'、'Weekly active users'。UI 需要清晰、可读，有柔和阴影和产品驱动型创业公司审美。不要人物，不要装饰性光球，不要不可读乱码文字。",
-    "recommended_settings": {
-      "size": "1536x1024",
-      "quality": "high",
-      "background": "opaque"
-    },
-    "tags": ["saas", "ui", "dashboard", "launch"],
-    "notes": "Tests text rendering and structured UI composition.",
-    "notes_zh": "用于测试文字渲染和结构化 UI 构图。"
-  },
-  {
-    "id": "character-mascot",
-    "title": "Consistent Helper Mascot",
-    "title_zh": "一致性助手吉祥物",
-    "category": "character-design",
-    "model": "gpt-image-2",
-    "preview_image": "assets/generated/character-mascot.png",
-    "prompt": "Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.",
-    "prompt_zh": "为一个开发者工具设计友好的 AI 助手吉祥物。角色是紧凑的几何机器人，拥有圆角方形头部、小天线、温暖屏幕表情和简单模块化四肢。使用干净的类矢量 3D 风格，象牙白主体、深石墨色细节和一个小珊瑚色状态灯。同一张图中展示三个姿势：挥手、指向终端、拿着小清单。所有姿势保持一致的轮廓。",
-    "recommended_settings": {
-      "size": "1536x1024",
-      "quality": "high",
-      "background": "transparent"
-    },
-    "tags": ["character", "mascot", "consistency", "developer-tools"],
-    "notes": "Designed to test multi-pose character consistency.",
-    "notes_zh": "用于测试同一角色在多姿势下的一致性。"
-  },
-  {
-    "id": "editorial-header",
-    "title": "Editorial AI Essay Header",
-    "title_zh": "AI 文章编辑头图",
-    "category": "editorial",
-    "model": "gpt-image-2",
-    "preview_image": "assets/generated/editorial-header.png",
-    "prompt": "Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.",
-    "prompt_zh": "为一篇题为 'The New Visual Language of AI Products' 的文章创建电影感编辑头图。画面中有安静的工作桌、打印出来的图像 contact sheets、一台打开 prompt editor 的笔记本电脑，以及墙上固定的色彩研究板。情绪：思考感、精确、创造性工程。使用自然窗光、低饱和橄榄色和铁锈色点缀、浅景深、高端科技杂志风格。左上方保留干净空间用于标题排版。",
-    "recommended_settings": {
-      "size": "1536x1024",
-      "quality": "high",
-      "background": "opaque"
-    },
-    "tags": ["editorial", "blog", "magazine", "technology"],
-    "notes": "Good for blog and social share assets.",
-    "notes_zh": "适合博客和社交媒体预览图。"
-  },
-  {
-    "id": "isometric-workflow",
-    "title": "Isometric Workflow Diagram",
-    "title_zh": "等距工作流图",
-    "category": "diagram",
-    "model": "gpt-image-2",
-    "preview_image": "assets/generated/isometric-workflow.png",
-    "prompt": "Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.",
-    "prompt_zh": "生成一张干净的等距图，解释 AI 图像提示词工作流。包含五个清晰标签阶段：'Idea'、'Prompt'、'Generate'、'Evaluate'、'Refine'。使用简单几何工作台，并用细线连接。标签需要清晰可读。风格：现代技术文档、白色背景、深石墨线条、少量珊瑚色和蓝绿色点缀，不要杂乱。",
-    "recommended_settings": {
-      "size": "1536x1024",
-      "quality": "high",
-      "background": "opaque"
-    },
-    "tags": ["diagram", "workflow", "documentation", "isometric"],
-    "notes": "Tests diagram label rendering and layout control.",
-    "notes_zh": "用于测试图示标签渲染和布局控制。"
+    "notes": "Strong commercial demo because product shots are easy to compare and reuse.",
+    "notes_zh": "商业演示稳定，产品图容易对比和复用。"
   },
   {
     "id": "packaging-system",
     "title": "Brand Packaging System",
     "title_zh": "品牌包装系统",
-    "category": "brand-design",
+    "category": "brand-commercial",
     "model": "gpt-image-2",
     "preview_image": "assets/generated/packaging-system.png",
     "prompt": "Create a brand packaging system mockup for a specialty tea company named 'North Window'. Show three boxes, two cylindrical tins, and a folded paper insert on a neutral stone surface. Use a restrained palette of pine green, cream, charcoal, and copper foil. Typography should be minimal and readable. The layout should feel like a premium design studio case study.",
@@ -108,10 +324,82 @@
     "notes_zh": "适合品牌设计师和电商创作者。"
   },
   {
+    "id": "minimal-saas-hero",
+    "title": "Minimal SaaS Launch Hero",
+    "title_zh": "极简 SaaS 发布图",
+    "category": "brand-commercial",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/minimal-saas-hero.png",
+    "prompt": "Generate a polished SaaS launch hero image showing a floating analytics dashboard UI over a calm off-white background. The dashboard should use restrained black, sage green, and coral accents. Include realistic text placeholders: 'Revenue', 'Retention', 'Forecast', and 'Weekly active users'. Make the UI crisp and legible, with soft shadows and a product-led startup aesthetic. No people, no decorative blobs, no unreadable fake text.",
+    "prompt_zh": "生成一张精致的 SaaS 发布主视觉：在平静的米白背景上展示悬浮的数据分析 dashboard UI。界面使用克制的黑色、鼠尾草绿和珊瑚色点缀。包含真实可读的文字占位：'Revenue'、'Retention'、'Forecast'、'Weekly active users'。UI 需要清晰、可读，有柔和阴影和产品驱动型创业公司审美。不要人物，不要装饰性光球，不要不可读乱码文字。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["saas", "ui", "dashboard", "launch"],
+    "notes": "Tests text rendering and structured UI composition.",
+    "notes_zh": "用于测试文字渲染和结构化 UI 构图。"
+  },
+  {
+    "id": "editorial-header",
+    "title": "Editorial AI Essay Header",
+    "title_zh": "AI 文章编辑头图",
+    "category": "brand-commercial",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/editorial-header.png",
+    "prompt": "Create a cinematic editorial header illustration for an article titled 'The New Visual Language of AI Products'. Show a quiet desk with printed image contact sheets, a laptop with a prompt editor, and a wall of pinned color studies. Mood: thoughtful, precise, creative engineering. Use natural window light, muted olive and rust accents, shallow depth of field, and a high-end technology magazine style. Leave clean space at the top left for title typography.",
+    "prompt_zh": "为一篇题为 'The New Visual Language of AI Products' 的文章创建电影感编辑头图。画面中有安静的工作桌、打印出来的图像 contact sheets、一台打开 prompt editor 的笔记本电脑，以及墙上固定的色彩研究板。情绪：思考感、精确、创造性工程。使用自然窗光、低饱和橄榄色和铁锈色点缀、浅景深、高端科技杂志风格。左上方保留干净空间用于标题排版。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["editorial", "blog", "magazine", "technology"],
+    "notes": "Good for blog and social share assets.",
+    "notes_zh": "适合博客和社交媒体预览图。"
+  },
+  {
+    "id": "character-mascot",
+    "title": "Consistent Helper Mascot",
+    "title_zh": "一致性助手吉祥物",
+    "category": "utility-design",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/character-mascot.png",
+    "prompt": "Design a friendly AI helper mascot for a developer tool. The character is a compact geometric robot with a rounded square head, small antenna, warm screen face, and simple modular limbs. Use a clean vector-like 3D style, ivory body, dark graphite details, and a small coral status light. Show the mascot in three poses in one image: waving, pointing at a terminal, and holding a small checklist. Keep the silhouette consistent across all poses.",
+    "prompt_zh": "为一个开发者工具设计友好的 AI 助手吉祥物。角色是紧凑的几何机器人，拥有圆角方形头部、小天线、温暖屏幕表情和简单模块化四肢。使用干净的类矢量 3D 风格，象牙白主体、深石墨色细节和一个小珊瑚色状态灯。同一张图中展示三个姿势：挥手、指向终端、拿着小清单。所有姿势保持一致的轮廓。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "transparent"
+    },
+    "tags": ["character", "mascot", "consistency", "developer-tools"],
+    "notes": "Designed to test multi-pose character consistency.",
+    "notes_zh": "用于测试同一角色在多姿势下的一致性。"
+  },
+  {
+    "id": "isometric-workflow",
+    "title": "Isometric Workflow Diagram",
+    "title_zh": "等距工作流图",
+    "category": "utility-design",
+    "model": "gpt-image-2",
+    "preview_image": "assets/generated/isometric-workflow.png",
+    "prompt": "Generate a clean isometric diagram explaining an AI image prompt workflow. Include five labeled stages: 'Idea', 'Prompt', 'Generate', 'Evaluate', 'Refine'. Use simple geometric workstations connected by thin lines. Make labels crisp and readable. Style: modern technical documentation, white background, dark graphite lines, small coral and teal accents, no clutter.",
+    "prompt_zh": "生成一张干净的等距图，解释 AI 图像提示词工作流。包含五个清晰标签阶段：'Idea'、'Prompt'、'Generate'、'Evaluate'、'Refine'。使用简单几何工作台，并用细线连接。标签需要清晰可读。风格：现代技术文档、白色背景、深石墨线条、少量珊瑚色和蓝绿色点缀，不要杂乱。",
+    "recommended_settings": {
+      "size": "1536x1024",
+      "quality": "high",
+      "background": "opaque"
+    },
+    "tags": ["diagram", "workflow", "documentation", "isometric"],
+    "notes": "Tests diagram label rendering and layout control.",
+    "notes_zh": "用于测试图示标签渲染和布局控制。"
+  },
+  {
     "id": "architectural-concept",
     "title": "Small Pavilion Concept",
     "title_zh": "湖畔阅读亭概念",
-    "category": "architecture",
+    "category": "utility-design",
     "model": "gpt-image-2",
     "preview_image": "assets/generated/architectural-concept.png",
     "prompt": "Design a small lakeside reading pavilion at dusk. The pavilion uses warm timber ribs, translucent paper-like panels, and a low stone platform. Show a wide architectural visualization with calm water reflections, soft interior glow, and realistic surrounding reeds. No people. The result should feel buildable, not fantasy architecture.",
@@ -129,7 +417,7 @@
     "id": "sticker-sheet",
     "title": "Developer Sticker Sheet",
     "title_zh": "开发者贴纸套装",
-    "category": "illustration",
+    "category": "utility-design",
     "model": "gpt-image-2",
     "preview_image": "assets/generated/sticker-sheet.png",
     "prompt": "Create a sticker sheet for AI developers. Include 12 separate die-cut stickers on a transparent background: terminal window, prompt cursor, image grid, tiny robot head, coffee cup, checklist, model card, dataset stack, magic wand, browser tab, camera lens, and small badge reading 'ship it'. Use consistent thick outlines, limited colors, and playful but polished vector style.",

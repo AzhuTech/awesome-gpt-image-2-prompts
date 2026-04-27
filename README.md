@@ -5,9 +5,9 @@
 
 English | [中文](README.zh-CN.md)
 
-Curated prompt patterns, visual recipes, and demo scaffolding for `gpt-image-2`.
+Curated high-impact prompt recipes and a visual gallery for `gpt-image-2`.
 
-This repository turns high-signal image prompting patterns into clean, copy-ready GPT Image 2 recipes with structured metadata and a local demo gallery.
+This repository turns shareable image prompting patterns into clean, copy-ready GPT Image 2 recipes with structured metadata and generated demo images.
 
 ![Awesome GPT Image 2 Prompts cover](assets/cover.svg)
 
@@ -19,20 +19,20 @@ This repo keeps prompts in structured JSON and renders a gallery so the collecti
 
 ## Gallery
 
-The gallery pairs each recipe with a generated output image so the repository is useful at first glance, not just a prompt dump.
+The gallery pairs every recipe with a generated output image so the repository feels like a visual catalog, not a prompt dump.
 
-![Product hero generated output](assets/generated/product-hero.png)
+![Boss arena key art generated output](assets/generated/boss-arena-key-art.png)
 
 ## Quick Browse
 
 | Category | Use case | Example |
 | --- | --- | --- |
-| Product photography | E-commerce hero shots | Premium bottle on colored acrylic, realistic studio lighting |
-| Character design | Consistent mascots | Friendly robot guide with reusable silhouette constraints |
-| UI and brand | App store / launch visuals | SaaS dashboard hero image with real text placeholders |
-| Editorial | Magazine and blog headers | Cinematic essay illustration with precise mood controls |
-| Diagrams | Explainers and systems | Clean isometric workflow diagram with labeled steps |
-| Image editing | Reference-based edits | Preserve product shape while changing scene, light, and props |
+| Game art | Key art, covers, RPG assets | Boss arenas, cyberpunk covers, cozy RPG villages |
+| Anime character | Splash art and collectible cards | Gacha heroes, mecha pilots, dark fantasy card art |
+| Cinematic film | Movie-frame prompts | Neon noir, space opera, desert chase frames |
+| Beauty photography | Editorial portrait prompts | Golden hour, neon studio, vintage film portraits |
+| Commercial | Brand and product visuals | Product hero shots, packaging systems, SaaS launch art |
+| Utility design | Reusable prompt tests | Mascots, diagrams, sticker sheets, architecture concepts |
 
 Browse the structured catalog:
 
@@ -49,6 +49,7 @@ Open the static demo gallery:
 cd examples
 npm run generate -- product-hero
 npm run generate:all
+npm run generate:missing
 ```
 
 The example script reads Azure/OpenAI-compatible settings from `.env` and writes generated images to `assets/generated/`.

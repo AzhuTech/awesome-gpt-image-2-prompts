@@ -6,10 +6,7 @@ Observed on 2026-04-26.
 
 OpenAI's model page lists `gpt-image-2` as the default GPT Image 2 model and describes it as a state-of-the-art image generation model for fast, high-quality generation and editing. The page lists text and image as inputs, image as output, and image generation / image edit endpoints. It also lists the snapshot `gpt-image-2-2026-04-21`.
 
-Official sources:
-
-- https://platform.openai.com/docs/models/gpt-image-2
-- https://platform.openai.com/docs/guides/image-generation
+Official sources are tracked in AzhuTech's private ops source ledger (kept out of the public repo).
 
 ## What Strong Prompt Repos Do Well
 
@@ -55,6 +52,18 @@ AzhuTech should move toward a browsable gallery with prompt cards, generated ima
 - model notes,
 - evaluation notes.
 
+### 6. Viral image prompt categories are more visual than useful
+
+For an image prompt repository, stars are easier to earn when the first screen shows subjects that people already save and repost:
+
+- game key art,
+- anime and collectible character art,
+- cinematic film stills,
+- beauty and fashion editorials,
+- dramatic fantasy and sci-fi environments.
+
+The repo now treats product, diagram, and utility prompts as supporting categories rather than the lead offer.
+
 ## Recommended AzhuTech Structure
 
 Public repository:
@@ -66,6 +75,7 @@ Public repository:
 - `examples/generate.js`
 - `docs/index.html`
 - `assets/cover.svg`
+- `assets/generated/*.png`
 
 Future website:
 
