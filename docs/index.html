@@ -276,6 +276,15 @@
       font-weight: 900;
       cursor: pointer;
     }
+    @media (max-width: 980px) {
+      .hero-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .hero-tile-large,
+      .hero-tile {
+        min-height: 260px;
+      }
+    }
     @media (max-width: 720px) {
       header {
         min-height: auto;
