@@ -4,9 +4,9 @@
 
 [English](README.md) | 中文
 
-面向 `gpt-image-2` 的高传播视觉提示词、真实生成图和轻量 gallery 演示仓库。
+面向 `gpt-image-2` 的视觉灵感库、真实生成图和轻量 gallery 演示仓库。
 
-本仓库会把适合传播的图像提示词模式整理为 GPT Image 2 结构化 prompt recipes，并提供真实生成图 gallery。
+本仓库会把游戏、影视、人像、角色和商业视觉的画面配方整理为 GPT Image 2 结构化 prompt recipes，并提供真实生成图 gallery。
 
 ![Awesome GPT Image 2 Prompts cover](assets/cover.svg)
 
@@ -29,7 +29,7 @@
 | Game art | 游戏关键图、封面、RPG 资产 | Boss 战场景、赛博武士封面、治愈系 RPG 村庄 |
 | Anime character | 二次元角色立绘与卡牌 | 抽卡角色、机甲驾驶员、暗黑幻想卡牌 |
 | Cinematic film | 电影感画面 | 霓虹黑色电影、太空歌剧、沙漠追逐帧 |
-| Beauty photography | 高级人像摄影 | 黄金时刻、霓虹棚拍、复古胶片美女人像 |
+| Beauty photography | 高级人像摄影 | 黄金时刻、霓虹棚拍、复古胶片人像 |
 | Commercial | 商业品牌视觉 | 产品主视觉、包装系统、SaaS 发布图 |
 | Utility design | 可复用测试样张 | 吉祥物、图示、贴纸套装、建筑概念 |
 

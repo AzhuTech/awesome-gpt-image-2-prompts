@@ -16,7 +16,7 @@ const categoryLabelsZh = {
   "game-art": "游戏艺术",
   "anime-character": "二次元角色",
   "cinematic-film": "影视电影感",
-  "beauty-photography": "美女摄影",
+  "beauty-photography": "人像大片",
   "brand-commercial": "商业品牌",
   "utility-design": "实用设计"
 };
@@ -398,11 +398,11 @@ const html = `<!doctype html>
     </div>
     <h1>
       <span data-lang="en">Viral GPT Image 2 Prompts</span>
-      <span data-lang="zh">高传播 GPT Image 2 提示词</span>
+      <span data-lang="zh">GPT Image 2 视觉灵感库</span>
     </h1>
     <p>
       <span data-lang="en">Copy-ready recipes for game art, cinematic film frames, anime character cards, beauty editorials, and commercial visuals.</span>
-      <span data-lang="zh">面向游戏艺术、影视剧照、二次元角色、美女摄影和商业视觉的可复制提示词与真实生成图。</span>
+      <span data-lang="zh">收录游戏关键图、电影感画面、角色立绘、人像大片与商业视觉，配好真实生成图和可复用画面配方。</span>
     </p>
     <div class="hero-gallery">
 ${heroTiles}
